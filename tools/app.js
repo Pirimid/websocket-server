@@ -5,6 +5,9 @@ const socketIO = require("socket.io");
 const port = process.env.PORT || 4001;
 const index = require("../src/index");
 
+const PositionsData = require("../constants/sampleData");
+const PositionsMetaData = require("../constants/metaData");
+
 const app = express();
 app.use(index);
 
@@ -21,12 +24,13 @@ io.on("connection", socket => {
   });
   socket.on('get-data', () => startSendingDataToClient(socket));
   socket.on('FETCH_POSITIONS', () => startSendingDataToClient(socket));
+  socket.on('FETCH_POSITOINS_META_DATA', () => socket.emit('POSITIONS_META_DATA_FETCHED', PositionsMetaData));
 });
 
 server.listen(port, () => console.log(`Listening on port ${port}`));
 
 startSendingDataToClient = (socket) => {
-  socket.emit('POSITIONS_DATA_FETCHED', data);
+  socket.emit('POSITIONS_DATA_FETCHED', PositionsData);
   setInterval(() => sendUpdates(socket), 500);
 }
 
@@ -41,110 +45,3 @@ const generateNewUpdatedData = () => {
 }
 
 const getNewValue = () => (Math.random() * (459 - 451) + 451).toFixed(4);
-
-const data = [
-  {
-    id: 1,
-    symbol: "COPPERNOV",
-    volume: 5,
-    avgPrice: 457.3321,
-    lastRate: 455.0501,
-    profitLoss: 54800.0014,
-    companyVolume: -15.68,
-    companyPL: 85214.1245,
-    companyExposure: 3004.2214,
-    grossExposure: 5846.1452,
-    grossPL: 95624.2451
-  },
-  {
-    id: 2,
-    symbol: "COPPERNOV",
-    volume: 5,
-    avgPrice: 457.3321,
-    lastRate: 455.0501,
-    profitLoss: 54800.0014,
-    companyVolume: -15.68,
-    companyPL: 85214.1245,
-    companyExposure: 3004.2214,
-    grossExposure: 5846.1452,
-    grossPL: 95624.2451
-  },
-  {
-    id: 3,
-    symbol: "COPPERNOV",
-    volume: 5,
-    avgPrice: 457.3321,
-    lastRate: 455.0501,
-    profitLoss: 54800.0014,
-    companyVolume: -15.68,
-    companyPL: 85214.1245,
-    companyExposure: 3004.2214,
-    grossExposure: 5846.1452,
-    grossPL: 95624.2451
-  },
-  {
-    id: 4,
-    symbol: "COPPERNOV",
-    volume: 5,
-    avgPrice: 457.3321,
-    lastRate: 455.0501,
-    profitLoss: 54800.0014,
-    companyVolume: -15.68,
-    companyPL: 85214.1245,
-    companyExposure: 3004.2214,
-    grossExposure: 5846.1452,
-    grossPL: 95624.2451
-  },
-  {
-    id: 5,
-    symbol: "COPPERNOV",
-    volume: 5,
-    avgPrice: 457.3321,
-    lastRate: 455.0501,
-    profitLoss: 54800.0014,
-    companyVolume: -15.68,
-    companyPL: 85214.1245,
-    companyExposure: 3004.2214,
-    grossExposure: 5846.1452,
-    grossPL: 95624.2451
-  },
-  {
-    id: 6,
-    symbol: "COPPERNOV",
-    volume: 5,
-    avgPrice: 457.3321,
-    lastRate: 455.0501,
-    profitLoss: 54800.0014,
-    companyVolume: -15.68,
-    companyPL: 85214.1245,
-    companyExposure: 3004.2214,
-    grossExposure: 5846.1452,
-    grossPL: 95624.2451
-  },
-  {
-    id: 7,
-    symbol: "COPPERNOV",
-    volume: 5,
-    avgPrice: 457.3321,
-    lastRate: 455.0501,
-    profitLoss: 54800.0014,
-    companyVolume: -15.68,
-    companyPL: 85214.1245,
-    companyExposure: 3004.2214,
-    grossExposure: 5846.1452,
-    grossPL: 95624.2451
-  },
-  {
-    id: 8,
-    symbol: "COPPERNOV",
-    volume: 5,
-    avgPrice: 457.3321,
-    lastRate: 455.0501,
-    profitLoss: 54800.0014,
-    companyVolume: -15.68,
-    companyPL: 85214.1245,
-    companyExposure: 3004.2214,
-    grossExposure: 5846.1452,
-    grossPL: 95624.2451
-  },
-];
