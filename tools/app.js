@@ -37,11 +37,8 @@ startSendingDataToClient = (socket) => {
 const sendUpdates = (socket) => socket.emit("POSITIONS_DATA_UPDATED", generateNewUpdatedData());
 
 const generateNewUpdatedData = () => {
-  let data = [];
-  for (let i = 1; i <= 8; i++) {
-    data.push({ id: i, avgPrice: getNewValue() });
-  }
+  const data = PositionsData.map(symbol => ({ id: symbol.id, avgPrice: getNewValue(symbol.avgPrice) }));
   return data;
 }
 
-const getNewValue = () => (Math.random() * (459 - 451) + 451).toFixed(4);
+const getNewValue = (currentValue) => (Math.random() * ((currentValue + 10) - (currentValue - 10)) + (currentValue - 10)).toFixed(4);

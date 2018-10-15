@@ -11,7 +11,7 @@ const PositionPanelMetaData = [
   },
   {
     name: "symbol",
-    displayValue: "Changed Header",
+    displayValue: "Symbol",
     dataType: "string",
     size: 30,
     decimalLocator: 0,
