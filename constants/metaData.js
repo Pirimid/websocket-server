@@ -1,9 +1,12 @@
 const DOUBLE = "double";
-const PositionPanelMetaData = [
+const STRING = "string";
+const INT = "int";
+
+const positionPanelMetaData = [
   {
     name: "id",
     displayValue: "Id",
-    dataType: "int",
+    dataType: INT,
     decimalLocator: 0,
     editable: false,
     hidden: true,
@@ -12,7 +15,7 @@ const PositionPanelMetaData = [
   {
     name: "symbol",
     displayValue: "Symbol",
-    dataType: "string",
+    dataType: STRING,
     size: 30,
     decimalLocator: 0,
     editable: false,
@@ -111,4 +114,418 @@ const PositionPanelMetaData = [
   }
 ];
 
-module.exports = PositionPanelMetaData;
+const mainPanelData = [
+  {
+    "name": "id",
+    "displayValue": "Id",
+    "dataType": DOUBLE,
+    "decimalLocator": null,
+    "editable": false,
+    "hidden": true,
+    "sequence": 0
+  },
+  {
+    "name": "login",
+    "displayValue": "Login",
+    "dataType": STRING,
+    "size": 15,
+    "decimalLocator": null,
+    "editable": false,
+    "hidden": false,
+    "sequence": 1
+  },
+  {
+    "name": "name",
+    "displayValue": "Name",
+    "dataType": STRING,
+    "size": 30,
+    "decimalLocator": null,
+    "editable": false,
+    "hidden": false,
+    "sequence": 2
+  },
+  {
+    "name": "symbol",
+    "displayValue": "Symbol",
+    "dataType": STRING,
+    "size": 30,
+    "decimalLocator": null,
+    "editable": false,
+    "hidden": false,
+    "sequence": 3
+  },
+  {
+    "name": "prevVol",
+    "displayValue": "Previous Volume",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": false,
+    "hidden": false,
+    "sequence": 4
+  },
+  {
+    "name": "volDiff",
+    "displayValue": "Volume Diff",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": false,
+    "hidden": false,
+    "sequence": 5
+  },
+  {
+    "name": "volume",
+    "displayValue": "Volume",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": false,
+    "hidden": false,
+    "sequence": 6
+  },
+  {
+    "name": "avgMt5",
+    "displayValue": "Average MT5",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": false,
+    "hidden": false,
+    "sequence": 7
+  },
+  {
+    "name": "lastRate",
+    "displayValue": "Last Rate",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": false,
+    "hidden": false,
+    "sequence": 8
+  },
+  {
+    "name": "profLoss",
+    "displayValue": "Profit & Loss",
+    "dataType": DOUBLE,
+    "decimalLocator": 0,
+    "editable": false,
+    "hidden": false,
+    "sequence": 9
+  },
+  {
+    "name": "clientBal",
+    "displayValue": "Client Balance",
+    "dataType": DOUBLE,
+    "decimalLocator": 0,
+    "editable": false,
+    "hidden": false,
+    "sequence": 10
+  },
+  {
+    "name": "brokerBal",
+    "displayValue": "Broker Balance",
+    "dataType": DOUBLE,
+    "decimalLocator": 0,
+    "editable": false,
+    "hidden": false,
+    "sequence": 11
+  },
+  {
+    "name": "subBrokerBal",
+    "displayValue": "Sub Broker Balance",
+    "dataType": DOUBLE,
+    "decimalLocator": 0,
+    "editable": false,
+    "hidden": false,
+    "sequence": 12
+  },
+  {
+    "name": "compBal",
+    "displayValue": "Company Balance",
+    "dataType": DOUBLE,
+    "decimalLocator": 0,
+    "editable": false,
+    "hidden": false,
+    "sequence": 13
+  },
+  {
+    "name": "lastUpdated",
+    "displayValue": "Last Updated",
+    "dataType": INT,
+    "decimalLocator": null,
+    "editable": false,
+    "hidden": false,
+    "sequence": 14
+  },
+  {
+    "name": "groupMt5",
+    "displayValue": "Group MT5",
+    "dataType": STRING,
+    "size": 30,
+    "decimalLocator": null,
+    "editable": false,
+    "hidden": false,
+    "sequence": 15
+  },
+  {
+    "name": "groupExtra",
+    "displayValue": "Group Extra",
+    "dataType": STRING,
+    "size": 30,
+    "decimalLocator": null,
+    "editable": false,
+    "hidden": false,
+    "sequence": 16
+  },
+  {
+    "name": "checkedStatus",
+    "displayValue": "Checked Status",
+    "dataType": STRING,
+    "size": 30,
+    "decimalLocator": null,
+    "editable": false,
+    "hidden": false,
+    "sequence": 17
+  },
+  {
+    "name": "allotedLimit",
+    "displayValue": "Alloted Limit",
+    "dataType": DOUBLE,
+    "decimalLocator": 0,
+    "editable": false,
+    "hidden": false,
+    "sequence": 18
+  },
+  {
+    "name": "lossLimit",
+    "displayValue": "Loss Limit",
+    "dataType": DOUBLE,
+    "decimalLocator": 0,
+    "editable": true,
+    "hidden": false,
+    "sequence": 19
+  },
+  {
+    "name": "avgRateAccounting",
+    "displayValue": "Average Rate Accounting",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": false,
+    "hidden": false,
+    "sequence": 20
+  },
+  {
+    "name": "balMt5",
+    "displayValue": "Balance MT5",
+    "dataType": DOUBLE,
+    "decimalLocator": 0,
+    "editable": false,
+    "hidden": false,
+    "sequence": 21
+  },
+  {
+    "name": "settledTradeVol",
+    "displayValue": "Settled Trade volume",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": false,
+    "hidden": false,
+    "sequence": 22
+  },
+  {
+    "name": "marginLive",
+    "displayValue": "Margin Live",
+    "dataType": DOUBLE,
+    "decimalLocator": 0,
+    "editable": false,
+    "hidden": false,
+    "sequence": 23
+  },
+  {
+    "name": "creditLimit",
+    "displayValue": "Credit Limit ",
+    "dataType": DOUBLE,
+    "decimalLocator": 0,
+    "editable": true,
+    "hidden": false,
+    "sequence": 24
+  },
+  {
+    "name": "clientBrokagePercentage",
+    "displayValue": "Client Brokage %",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": true,
+    "hidden": false,
+    "sequence": 25
+  },
+  {
+    "name": "subBrokeragePercentage",
+    "displayValue": "Sub Brokerage %",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": true,
+    "hidden": false,
+    "sequence": 26
+  },
+  {
+    "name": "brokerBrokeragePercentage",
+    "displayValue": "Broker Brokerage %",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": true,
+    "hidden": false,
+    "sequence": 27
+  },
+  {
+    "name": "compBrokeragePercentage",
+    "displayValue": "Company Brokerage %",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": true,
+    "hidden": false,
+    "sequence": 28
+  },
+  {
+    "name": "clientProfLossPercentage",
+    "displayValue": "Client P&L %",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": true,
+    "hidden": false,
+    "sequence": 29
+  },
+  {
+    "name": "subProfLossPercentage",
+    "displayValue": "Sub P&L %",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": true,
+    "hidden": false,
+    "sequence": 30
+  },
+  {
+    "name": "brokerProfLossPercentage",
+    "displayValue": "Broker P&L %",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": true,
+    "hidden": false,
+    "sequence": 31
+  },
+  {
+    "name": "compProfLossPercentage",
+    "displayValue": "Company P&L %",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": true,
+    "hidden": false,
+    "sequence": 32
+  },
+  {
+    "name": "clientBrokageTotal",
+    "displayValue": "Client Brokage Total",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": false,
+    "hidden": false,
+    "sequence": 33
+  },
+  {
+    "name": "subBrokerageTotal",
+    "displayValue": "Sub Brokerage Total",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": false,
+    "hidden": false,
+    "sequence": 34
+  },
+  {
+    "name": "brokerBrokerageTotal",
+    "displayValue": "Broker Brokerage Total",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": false,
+    "hidden": false,
+    "sequence": 35
+  },
+  {
+    "name": "companyBrokerageTotal",
+    "displayValue": "Company Brokerage Total",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": false,
+    "hidden": false,
+    "sequence": 36
+  },
+  {
+    "name": "grossExposure",
+    "displayValue": "Gross Exposure",
+    "dataType": DOUBLE,
+    "decimalLocator": 0,
+    "editable": false,
+    "hidden": false,
+    "sequence": 37
+  },
+  {
+    "name": "brokerExosure",
+    "displayValue": "Broker Exosure",
+    "dataType": DOUBLE,
+    "decimalLocator": 0,
+    "editable": false,
+    "hidden": false,
+    "sequence": 38
+  },
+  {
+    "name": "subBrokerExposure",
+    "displayValue": "Sub Broker Exposure",
+    "dataType": DOUBLE,
+    "decimalLocator": 0,
+    "editable": false,
+    "hidden": false,
+    "sequence": 39
+  },
+  {
+    "name": "companyExposure",
+    "displayValue": "Company Exposure",
+    "dataType": DOUBLE,
+    "decimalLocator": 0,
+    "editable": false,
+    "hidden": false,
+    "sequence": 40
+  },
+  {
+    "name": "expectedProfLoss",
+    "displayValue": "Expected PL",
+    "dataType": DOUBLE,
+    "decimalLocator": 0,
+    "editable": false,
+    "hidden": false,
+    "sequence": 41
+  },
+  {
+    "name": "totalQtyByExchange",
+    "displayValue": "Total Lot qty According to Exchange",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": false,
+    "hidden": false,
+    "sequence": 42
+  },
+  {
+    "name": "compLotQtyByExchange",
+    "displayValue": "Company Lot qty According to Exchange",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": false,
+    "hidden": false,
+    "sequence": 43
+  },
+  {
+    "name": "extraLot",
+    "displayValue": "Extra Lot",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": false,
+    "hidden": false,
+    "sequence": 44
+  }
+];
+
+module.exports = { positionPanelMetaData, mainPanelData };

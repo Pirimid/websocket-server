@@ -6,7 +6,7 @@ const port = process.env.PORT || 4001;
 const index = require("../src/index");
 
 const sampleData = require("../constants/sampleData");
-const PositionsMetaData = require("../constants/metaData");
+const metaData = require("../constants/metaData");
 
 const app = express();
 app.use(index);
@@ -24,14 +24,16 @@ io.on("connection", socket => {
   });
   socket.on('get-data', () => startSendingDataToClient(socket));
   socket.on('FETCH_POSITIONS', () => startSendingDataToClient(socket));
-  socket.on('FETCH_POSITOINS_META_DATA', () => socket.emit('POSITIONS_META_DATA_FETCHED', PositionsMetaData));
+  socket.on('FETCH_POSITOINS_META_DATA', () => socket.emit('POSITIONS_META_DATA', metaData.positionPanelMetaData));
+  socket.on('FETCH_NET_POSITION_META_DATA', () => socket.emit('NET_POSITION_META_DATA', metaData.mainPanelData));
+  socket.on('FETCH_NET_POSITIONS', () => socket.emit('NET_POSITIONS', sampleData.netPositionData));
   socket.on('FETCH_TICK_DATA', () => socket.emit('TICK_DATA', sampleData.tickData));
 });
 
 server.listen(port, () => console.log(`Listening on port ${port}`));
 
 startSendingDataToClient = (socket) => {
-  socket.emit('POSITIONS_DATA_FETCHED', sampleData.positionsData);
+  socket.emit('POSITIONS_DATA', sampleData.positionsData);
   setInterval(() => sendUpdates(socket), 500);
 }
 
