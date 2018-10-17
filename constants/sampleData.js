@@ -1,4 +1,4 @@
-const PositionsData = [
+const positionsData = [
   {
     id: 1,
     symbol: "COPPERNOV",
@@ -113,4 +113,70 @@ const PositionsData = [
   },
 ];
 
-module.exports = PositionsData;
+const tickData = [
+  {
+    "symbol": "PB3M",
+    "bid": 2055.50,
+    "ask": 2058.00,
+    "last": 0.00,
+    "ticktime": 1539770497
+  },
+  {
+    "symbol": "CRUDEOCT",
+    "bid": 5286.00,
+    "ask": 5288.00,
+    "last": 0.00,
+    "ticktime": 1539770496
+  },
+  {
+    "symbol": "CRUDEOILc2",
+    "bid": 5291.00,
+    "ask": 5293.00,
+    "last": 0.00,
+    "ticktime": 1539770497
+  },
+  {
+    "symbol": "MCXABVCOSTGL",
+    "bid": 70.00,
+    "ask": 70.00,
+    "last": 0.00,
+    "ticktime": 1539770497
+  },
+  {
+    "symbol": "XAU",
+    "bid": 1222.42,
+    "ask": 1222.55,
+    "last": 0.00,
+    "ticktime": 1539770497
+  },
+  {
+    "symbol": "XAU",
+    "bid": 1222.42,
+    "ask": 1222.56,
+    "last": 0.00,
+    "ticktime": 1539770497
+  },
+  {
+    "symbol": "209716",
+    "bid": 38796.00,
+    "ask": 38800.00,
+    "last": 38799.00,
+    "ticktime": 1539770497
+  },
+  {
+    "symbol": "GOLDc1",
+    "bid": 31806.00,
+    "ask": 31811.00,
+    "last": 0.00,
+    "ticktime": 1539770497
+  },
+  {
+    "symbol": "MCXBLWNXTG",
+    "bid": 251.00,
+    "ask": 251.00,
+    "last": 0.00,
+    "ticktime": 1539770497
+  }
+];
+
+module.exports = { positionsData, tickData };

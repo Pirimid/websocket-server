@@ -5,7 +5,7 @@ const socketIO = require("socket.io");
 const port = process.env.PORT || 4001;
 const index = require("../src/index");
 
-const PositionsData = require("../constants/sampleData");
+const sampleData = require("../constants/sampleData");
 const PositionsMetaData = require("../constants/metaData");
 
 const app = express();
@@ -25,19 +25,20 @@ io.on("connection", socket => {
   socket.on('get-data', () => startSendingDataToClient(socket));
   socket.on('FETCH_POSITIONS', () => startSendingDataToClient(socket));
   socket.on('FETCH_POSITOINS_META_DATA', () => socket.emit('POSITIONS_META_DATA_FETCHED', PositionsMetaData));
+  socket.on('FETCH_TICK_DATA', () => socket.emit('TICK_DATA', sampleData.tickData));
 });
 
 server.listen(port, () => console.log(`Listening on port ${port}`));
 
 startSendingDataToClient = (socket) => {
-  socket.emit('POSITIONS_DATA_FETCHED', PositionsData);
+  socket.emit('POSITIONS_DATA_FETCHED', sampleData.positionsData);
   setInterval(() => sendUpdates(socket), 500);
 }
 
 const sendUpdates = (socket) => socket.emit("POSITIONS_DATA_UPDATED", generateNewUpdatedData());
 
 const generateNewUpdatedData = () => {
-  const data = PositionsData.map(symbol => ({ id: symbol.id, avgPrice: getNewValue(symbol.avgPrice) }));
+  const data = sampleData.positionsData.map(symbol => ({ id: symbol.id, avgPrice: getNewValue(symbol.avgPrice) }));
   return data;
 }
 
