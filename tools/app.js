@@ -27,7 +27,9 @@ io.on("connection", socket => {
   socket.on('FETCH_SCRIPT_WISE_POSITOINS_META_DATA', () => socket.emit('SCRIPT_WISE_POSITION_META_DATA', metaData.positionPanelMetaData));
   socket.on('FETCH_NET_POSITION_META_DATA', () => socket.emit('NET_POSITION_META_DATA', metaData.mainPanelData));
   socket.on('FETCH_NET_POSITIONS', () => socket.emit('NET_POSITIONS', sampleData.netPositionData));
-  socket.on('FETCH_TICK_DATA', () => socket.emit('TICK_DATA', sampleData.tickData));
+  socket.on('FETCH_TICK_DATA', () => { 
+    setInterval(() => socket.emit('TICK_DATA', sampleData.tickData), 500);
+  });
 });
 
 server.listen(port, () => console.log(`Listening on port ${port}`));
