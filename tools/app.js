@@ -35,7 +35,6 @@ function startSendingTickData(socket) {
   sampleData.tickData.forEach(tickData => {
     sampleTickData.push({ ...tickData, last: getNewValue(tickData.bid) });
   });
-  console.log(sampleTickData);
   socket.emit('TICK_DATA', sampleTickData);
 }
 
