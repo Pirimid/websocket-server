@@ -16,7 +16,7 @@ const tickData = [
   { "symbol": "MCXABVCOSTGL", "bid": 70.00, "ask": 70.00, "last": 0.00, "ticktime": 1539770497 },
   { "symbol": "XAU", "bid": 1222.42, "ask": 1222.55, "last": 0.00, "ticktime": 1539770497 },
   { "symbol": "XAU", "bid": 1222.42, "ask": 1222.56, "last": 0.00, "ticktime": 1539770497 },
-  { "symbol": "209716", "bid": 38796.00, "ask": 38800.00, "last": 38799.00, "ticktime": 1539770497 },
+  { "symbol": "NICKELOCT", "bid": 38796.00, "ask": 38800.00, "last": 0.00, "ticktime": 1539770497 },
   { "symbol": "GOLDc1", "bid": 31806.00, "ask": 31811.00, "last": 0.00, "ticktime": 1539770497 },
   { "symbol": "MCXBLWNXTG", "bid": 251.00, "ask": 251.00, "last": 0.00, "ticktime": 1539770497 }
 ];
