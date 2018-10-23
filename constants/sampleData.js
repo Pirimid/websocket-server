@@ -1,12 +1,12 @@
-const positionsData = [
-  { id: 1, symbol: "COPPERNOV", volumeCompany: -24, avgPrice: 457.3321, lastRate: 455.0501, profitLoss: 54800, compVolume: -15.68, compProfLoss: 85214, compExposure: 3004, grossExposure: 5846, grossVolume: 25.26, grossProfLoss: 95624 },
-  { id: 2, symbol: "CRUDEOCT", volumeCompany: -374, avgPrice: 5565.2021, lastRate: 5468.2014, profitLoss: 3635100, compVolume: -234.96, compProfLoss: 2264740, compExposure: 32456, grossExposure: 52146, grossVolume: 325.21, grossProfLoss: 5214523 },
-  { id: 3, symbol: "GCZ8", volumeCompany: -42, avgPrice: 1213.4125, lastRate: 1200.1001, profitLoss: 55480, compVolume: -40.32, compProfLoss: 44265, compExposure: 2314, grossExposure: 3215, grossVolume: 21.24, grossProfLoss: 54213 },
-  { id: 4, symbol: "GCZ81KG", volumeCompany: 16.55, avgPrice: 4571205.2142, lastRate: 1200.1001, profitLoss: -2912, compVolume: 16.55, compProfLoss: -2912, compExposure: 1524, grossExposure: 2145, grossVolume: 35.45, grossProfLoss: -3546 },
-  { id: 5, symbol: "GOLDDEC", volumeCompany: -1545.00, avgPrice: 31695.42, lastRate: 31435.00, profitLoss: 40235400, compVolume: -1122, compProfLoss: 28073792, compExposure: 59842, grossExposure: 74521, grossVolume: -4512, grossProfLoss: 32104586 },
-  { id: 6, symbol: "LEADOCT", volumeCompany: 25.00, avgPrice: 148.0745, lastRate: 146.7014, profitLoss: -171500, compVolume: 9, compProfLoss: -81287, compExposure: 2141, grossExposure: 3214, grossVolume: 32, grossProfLoss: -90457 },
-  { id: 7, symbol: "CROSILVERDEC", volumeCompany: 7.00, avgPrice: 37840.7124, lastRate: 39274.1242, profitLoss: 10033, compVolume: 7, compProfLoss: 10033, compExposure: 214, grossExposure: 365, grossVolume: 14, grossProfLoss: 21243 },
-  { id: 8, symbol: "MINIGOLDDEC", volumeCompany: -2152.00, avgPrice: 32164.77, lastRate: 31435.00, profitLoss: 4729510, compVolume: -1778, compProfLoss: 3923896, compExposure: -980, grossExposure: -4572, grossVolume: -2415, grossProfLoss: 4152342 }
+const symbolWisePositionData = [
+  { id: 1, symbol: "COPPERNOV", volumeCompany: -24, avgPrice: 457.3321, lastRate: 455.0501, profitLoss: 54800, compVolume: -15.68, compProfLoss: 85214, compExposure: 3004, grossExposure: 5846, grossVolume: 25.26, grossProfLoss: 95624, multiplayer: 50 },
+  { id: 2, symbol: "CRUDEOCT", volumeCompany: -374, avgPrice: 5565.2021, lastRate: 5468.2014, profitLoss: 3635100, compVolume: -234.96, compProfLoss: 2264740, compExposure: 32456, grossExposure: 52146, grossVolume: 325.21, grossProfLoss: 5214523, multiplayer: 100 },
+  { id: 3, symbol: "GCZ8", volumeCompany: -42, avgPrice: 1213.4125, lastRate: 1200.1001, profitLoss: 55480, compVolume: -40.32, compProfLoss: 44265, compExposure: 2314, grossExposure: 3215, grossVolume: 21.24, grossProfLoss: 54213, multiplayer: 25 },
+  { id: 4, symbol: "GCZ81KG", volumeCompany: 16.55, avgPrice: 4571205.2142, lastRate: 1200.1001, profitLoss: -2912, compVolume: 16.55, compProfLoss: -2912, compExposure: 1524, grossExposure: 2145, grossVolume: 35.45, grossProfLoss: -3546, multiplayer: 40 },
+  { id: 5, symbol: "GOLDDEC", volumeCompany: -1545.00, avgPrice: 31695.42, lastRate: 31435.00, profitLoss: 40235400, compVolume: -1122, compProfLoss: 28073792, compExposure: 59842, grossExposure: 74521, grossVolume: -4512, grossProfLoss: 32104586, multiplayer: 100 },
+  { id: 6, symbol: "LEADOCT", volumeCompany: 25.00, avgPrice: 148.0745, lastRate: 146.7014, profitLoss: -171500, compVolume: 9, compProfLoss: -81287, compExposure: 2141, grossExposure: 3214, grossVolume: 32, grossProfLoss: -90457, multiplayer: 5000 },
+  { id: 7, symbol: "CROSILVERDEC", volumeCompany: 7.00, avgPrice: 37840.7124, lastRate: 39274.1242, profitLoss: 10033, compVolume: 7, compProfLoss: 10033, compExposure: 214, grossExposure: 365, grossVolume: 14, grossProfLoss: 21243, multiplayer: 500 },
+  { id: 8, symbol: "MINIGOLDDEC", volumeCompany: -2152.00, avgPrice: 32164.77, lastRate: 31435.00, profitLoss: 4729510, compVolume: -1778, compProfLoss: 3923896, compExposure: -980, grossExposure: -4572, grossVolume: -2415, grossProfLoss: 4152342, multiplayer: 300 }
 ];
 
 const tickData = [
@@ -124,4 +124,4 @@ const netPositionData = [
   { "login": 100, "name": "John", "symbol": "MINIGOLDDEC", "prevVol": 492, "volDiff": 68, "volume": 241, "avgMt5": 55, "lastRate": 5591, "profLoss": 3177, "clientBal": 106, "brokerBal": 67, "subBrokerBal": 22, "compBal": 403, "lastUpdated": 4, "groupMt5": 52, "groupExtra": "sagittis. Nullam vitae", "checkedStatus": "PENDING", "allotedLimit": 6869, "lossLimit": -2020, "avgRateAccounting": 85, "balMt5": 41, "settledTradeVol": 166, "marginLive": 10, "creditLimit": 7416, "clientBrokagePercentage": 99, "subBrokeragePercentage": 39, "brokerBrokeragePercentage": 30, "compBrokeragePercentage": 39, "clientProfLossPercentage": 45, "subProfLossPercentage": 47, "brokerProfLossPercentage": 81, "compProfLossPercentage": 70, "clientBrokageTotal": 3003, "subBrokerageTotal": 14843, "brokerBrokerageTotal": 13368, "companyBrokerageTotal": 11544, "grossExposure": 14727, "brokerExosure": 17624, "subBrokerExposure": 9119, "companyExposure": 38889, "expectedProfLoss": 58, "totalQtyByExchange": 58491, "compLotQtyByExchange": 35746, "extraLot": 6808, "id": 100 }
 ];
 
-module.exports = { positionsData, tickData, netPositionData };
+module.exports = { symbolWisePositionData, tickData, netPositionData };

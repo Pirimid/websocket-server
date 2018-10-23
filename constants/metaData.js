@@ -2,7 +2,7 @@ const DOUBLE = "double";
 const STRING = "string";
 const INT = "int";
 
-const positionPanelMetaData = [
+const symbolWisePositionPanelMetaData = [
   {
     name: "id",
     displayValue: "Id",
@@ -111,10 +111,19 @@ const positionPanelMetaData = [
     editable: false,
     hidden: false,
     sequence: 11
+  },
+  {
+    name: "multiplayer",
+    displayValue: "Multiplayer",
+    dataType: INT,
+    decimalLocator: 0,
+    editable: false,
+    hidden: false,
+    sequence: 12
   }
 ];
 
-const mainPanelData = [
+const netsymbolWisePositionPanelMetaData = [
   {
     "name": "id",
     "displayValue": "Id",
@@ -528,4 +537,4 @@ const mainPanelData = [
   }
 ];
 
-module.exports = { positionPanelMetaData, mainPanelData };
+module.exports = { symbolWisePositionPanelMetaData, netsymbolWisePositionPanelMetaData };

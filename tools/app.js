@@ -24,11 +24,13 @@ io.on("connection", socket => {
   });
   socket.on('get-data', () => startSendingDataToClient(socket));
   socket.on('FETCH_SCRIPT_WISE_POSITIONS', () => startSendingDataToClient(socket));
-  socket.on('FETCH_SCRIPT_WISE_POSITOINS_META_DATA', () => socket.emit('SCRIPT_WISE_POSITION_META_DATA', metaData.positionPanelMetaData));
-  socket.on('FETCH_NET_POSITION_META_DATA', () => socket.emit('NET_POSITION_META_DATA', metaData.mainPanelData));
+  socket.on('FETCH_SCRIPT_WISE_POSITOINS_META_DATA', () => socket.emit('SCRIPT_WISE_POSITION_META_DATA', metaData.symbolWisePositionPanelMetaData));
+  socket.on('FETCH_NET_POSITION_META_DATA', () => socket.emit('NET_POSITION_META_DATA', metaData.netsymbolWisePositionPanelMetaData));
   socket.on('FETCH_NET_POSITIONS', () => socket.emit('NET_POSITIONS', sampleData.netPositionData));
   socket.on('FETCH_TICK_DATA', () => setInterval(() => startSendingTickData(socket), 500));
+  socket.on('FETCH_MARKET_DATA', () => sendMarketData(socket));
 });
+server.listen(port, () => console.log(`Listening on port ${port}`));
 
 function startSendingTickData(socket) {
   const sampleTickData = [];
@@ -38,17 +40,15 @@ function startSendingTickData(socket) {
   socket.emit('TICK_DATA', sampleTickData);
 }
 
-server.listen(port, () => console.log(`Listening on port ${port}`));
-
 startSendingDataToClient = (socket) => {
-  socket.emit('SCRIPT_WISE_POSITIONS_DATA', sampleData.positionsData);
+  socket.emit('SCRIPT_WISE_POSITIONS_DATA', sampleData.symbolWisePositionData);
   setInterval(() => sendUpdates(socket), 500);
 }
 
 const sendUpdates = (socket) => socket.emit("SCRIPT_WISE_POSITIONS_DATA_UPDATED", generateNewUpdatedData());
 
 const generateNewUpdatedData = () => {
-  const data = sampleData.positionsData.map(symbol => ({ id: symbol.id, avgPrice: getNewValue(symbol.avgPrice) }));
+  const data = sampleData.symbolWisePositionData.map(symbol => ({ id: symbol.id, avgPrice: getNewValue(symbol.avgPrice) }));
   return data;
 }
 
