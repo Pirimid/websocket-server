@@ -22,13 +22,13 @@ io.on("connection", socket => {
     console.log("Message from client: ", message);
     socket.emit('from-server', `Got your message: ${message}`);
   });
-  socket.on('get-data', () => startSendingDataToClient(socket));
   socket.on('FETCH_SCRIPT_WISE_POSITIONS', () => startSendingDataToClient(socket));
   socket.on('FETCH_SCRIPT_WISE_POSITOINS_META_DATA', () => socket.emit('SCRIPT_WISE_POSITION_META_DATA', metaData.symbolWisePositionPanelMetaData));
   socket.on('FETCH_NET_POSITION_META_DATA', () => socket.emit('NET_POSITION_META_DATA', metaData.netsymbolWisePositionPanelMetaData));
   socket.on('FETCH_NET_POSITIONS', () => socket.emit('NET_POSITIONS', sampleData.netPositionData));
   socket.on('FETCH_TICK_DATA', () => setInterval(() => startSendingTickData(socket), 500));
-  socket.on('FETCH_MARKET_DATA', () => sendMarketData(socket));
+  socket.on('FETCH_ORDER_META_DATA', () => socket.emit('ORDER_META_DATA', metaData.orderDataMetaData));
+  socket.on('FETCH_ORDER_DATA', () => sendMarketData(socket));
 });
 server.listen(port, () => console.log(`Listening on port ${port}`));
 
@@ -45,6 +45,22 @@ startSendingDataToClient = (socket) => {
   setInterval(() => sendUpdates(socket), 500);
 }
 
+sendMarketData = (socket) => {
+  socket.emit('ORDER_DATA', sampleData.orderData);
+  setInterval(() => sendNewOrderData(socket), 1000);
+}
+
+sendNewOrderData = (socket) => {
+  const newOrderData = [];
+  const orderData = sampleData.orderData;
+  for (let i = 1; i <= 2; i++) {
+    const index = getRandomIndexBetween(0, orderData.length - 1);
+    const order = orderData[index];
+    newOrderData.push({ ...order, netQuantity: getNewValue(order.netQuantity) });
+  }
+  socket.emit('ORDER_DATA', newOrderData);
+}
+
 const sendUpdates = (socket) => socket.emit("SCRIPT_WISE_POSITIONS_DATA_UPDATED", generateNewUpdatedData());
 
 const generateNewUpdatedData = () => {
@@ -53,3 +69,5 @@ const generateNewUpdatedData = () => {
 }
 
 const getNewValue = (currentValue) => (Math.random() * ((currentValue + 10) - (currentValue - 10)) + (currentValue - 10)).toFixed(4);
+
+const getRandomIndexBetween = (startIndex, endIndex) => (Math.random() * (endIndex - startIndex) + startIndex).toFixed(0);

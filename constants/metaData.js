@@ -356,7 +356,7 @@ const netsymbolWisePositionPanelMetaData = [
     "sequence": 24
   },
   {
-    "name": "clientBrokagePercentage",
+    "name": "clientBrokaragePercentage",
     "displayValue": "Client Brokage %",
     "dataType": DOUBLE,
     "decimalLocator": 2,
@@ -365,8 +365,8 @@ const netsymbolWisePositionPanelMetaData = [
     "sequence": 25
   },
   {
-    "name": "subBrokeragePercentage",
-    "displayValue": "Sub Brokerage %",
+    "name": "subBrokaragePercentage",
+    "displayValue": "Sub Brokarage %",
     "dataType": DOUBLE,
     "decimalLocator": 2,
     "editable": true,
@@ -374,8 +374,8 @@ const netsymbolWisePositionPanelMetaData = [
     "sequence": 26
   },
   {
-    "name": "brokerBrokeragePercentage",
-    "displayValue": "Broker Brokerage %",
+    "name": "brokerBrokaragePercentage",
+    "displayValue": "Broker Brokarage %",
     "dataType": DOUBLE,
     "decimalLocator": 2,
     "editable": true,
@@ -383,8 +383,8 @@ const netsymbolWisePositionPanelMetaData = [
     "sequence": 27
   },
   {
-    "name": "compBrokeragePercentage",
-    "displayValue": "Company Brokerage %",
+    "name": "compBrokaragePercentage",
+    "displayValue": "Company Brokarage %",
     "dataType": DOUBLE,
     "decimalLocator": 2,
     "editable": true,
@@ -428,7 +428,7 @@ const netsymbolWisePositionPanelMetaData = [
     "sequence": 32
   },
   {
-    "name": "clientBrokageTotal",
+    "name": "clientBrokarageTotal",
     "displayValue": "Client Brokage Total",
     "dataType": DOUBLE,
     "decimalLocator": 2,
@@ -437,8 +437,8 @@ const netsymbolWisePositionPanelMetaData = [
     "sequence": 33
   },
   {
-    "name": "subBrokerageTotal",
-    "displayValue": "Sub Brokerage Total",
+    "name": "subBrokarageTotal",
+    "displayValue": "Sub Brokarage Total",
     "dataType": DOUBLE,
     "decimalLocator": 2,
     "editable": false,
@@ -446,8 +446,8 @@ const netsymbolWisePositionPanelMetaData = [
     "sequence": 34
   },
   {
-    "name": "brokerBrokerageTotal",
-    "displayValue": "Broker Brokerage Total",
+    "name": "brokerBrokarageTotal",
+    "displayValue": "Broker Brokarage Total",
     "dataType": DOUBLE,
     "decimalLocator": 2,
     "editable": false,
@@ -455,8 +455,8 @@ const netsymbolWisePositionPanelMetaData = [
     "sequence": 35
   },
   {
-    "name": "companyBrokerageTotal",
-    "displayValue": "Company Brokerage Total",
+    "name": "companyBrokarageTotal",
+    "displayValue": "Company Brokarage Total",
     "dataType": DOUBLE,
     "decimalLocator": 2,
     "editable": false,
@@ -537,4 +537,86 @@ const netsymbolWisePositionPanelMetaData = [
   }
 ];
 
-module.exports = { symbolWisePositionPanelMetaData, netsymbolWisePositionPanelMetaData };
+const orderDataMetaData = [
+  {
+    "name": "login",
+    "displayValue": "Login",
+    "dataType": STRING,
+    "editable": false,
+    "hidden": false,
+    "sequence": 1
+  },
+  {
+    "name": "name",
+    "displayValue": "Name",
+    "dataType": STRING,
+    "editable": false,
+    "hidden": false,
+    "sequence": 2
+  },
+  {
+    "name": "symbol",
+    "displayValue": "Symbol",
+    "dataType": STRING,
+    "size": 30,
+    "editable": false,
+    "hidden": false,
+    "sequence": 3
+  },
+  {
+    "name": "netQuantity",
+    "displayValue": "Net Quantity",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": false,
+    "hidden": false,
+    "sequence": 4
+  },
+  {
+    "name": "clientBrokarage",
+    "displayValue": "Client Brokarage",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": false,
+    "hidden": false,
+    "sequence": 5
+  },
+  {
+    "name": "subBroker",
+    "displayValue": "Sub Broker",
+    "dataType": STRING,
+    "size": 30,
+    "editable": false,
+    "hidden": false,
+    "sequence": 6
+  },
+  {
+    "name": "brokarage",
+    "displayValue": "Brokarage",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": false,
+    "hidden": false,
+    "sequence": 7
+  },
+  {
+    "name": "brokerBrokarage",
+    "displayValue": "Broker Brokarage",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": false,
+    "hidden": false,
+    "sequence": 8
+  },
+  {
+    "name": "compBrokarage",
+    "displayValue": "Company Brokarage",
+    "dataType": DOUBLE,
+    "decimalLocator": 2,
+    "editable": false,
+    "hidden": false,
+    "sequence": 9
+  },
+];
+
+module.exports = { symbolWisePositionPanelMetaData, netsymbolWisePositionPanelMetaData, orderDataMetaData };
