@@ -4,7 +4,7 @@ const DOUBLE = "double";
 const STRING = "string";
 const INT = "int";
 
-const clientMaster = {
+const clientMasterMetaData = {
   type: constants.FETCH_CLIENT_MASTER_DATA,
   data: [
     {
@@ -865,4 +865,4 @@ const orderDataMetaData = {
   ]
 };
 
-module.exports = { clientMaster, symbolWisePositionPanelMetaData, netPositionPanelMetaData, orderDataMetaData };
+module.exports = { clientMasterMetaData, symbolWisePositionPanelMetaData, netPositionPanelMetaData, orderDataMetaData };

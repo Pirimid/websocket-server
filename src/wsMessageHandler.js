@@ -4,6 +4,8 @@ const metaData = require("../constants/metaData");
 const constants = require("../constants/constants");
 
 const MessageHandlers = {
+  [constants.FETCH_CLIENT_MASTER_META_DATA]: (webSocket) => sendClientMasterMetaData(webSocket),
+  [constants.FETCH_CLIENT_MASTER_DATA]: (webSocket) => sendClientMasterData(webSocket),
   [constants.FETCH_SCRIPT_WISE_POSITOINS_META_DATA]: (webSocket) => sendMessage(webSocket, metaData.symbolWisePositionPanelMetaData),
   [constants.FETCH_SCRIPT_WISE_POSITIONS]: (webSocket) => sendTickData(webSocket),
   [constants.FETCH_NET_POSITION_META_DATA]: (webSocket) => sendMessage(webSocket, metaData.netPositionPanelMetaData),
@@ -38,6 +40,14 @@ function handleMessage(webSocket, message) {
 function sendMessage(webSocket, message) {
   const msg = JSON.stringify(message);
   webSocket.send(msg);
+}
+
+function sendClientMasterMetaData(webSocket) {
+  sendMessage(webSocket, metaData.clientMasterMetaData);
+}
+
+function sendClientMasterData(webSocket) {
+  sendMessage(webSocket, sampleData.clientMasterData);
 }
 
 function startSendingTickData(webSocket) {
