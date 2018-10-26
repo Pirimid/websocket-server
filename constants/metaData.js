@@ -8,7 +8,7 @@ const clientMasterMetaData = {
   type: constants.FETCH_CLIENT_MASTER_DATA,
   data: [
     {
-      name: "login",
+      key: "login",
       displayValue: "Login",
       dataType: INT,
       editable: false,
@@ -16,7 +16,7 @@ const clientMasterMetaData = {
       sequence: 1
     },
     {
-      name: "symbol",
+      key: "symbol",
       displayValue: "Symbol",
       dataType: STRING,
       editable: false,
@@ -24,7 +24,7 @@ const clientMasterMetaData = {
       sequence: 2
     },
     {
-      name: "name",
+      key: "name",
       displayValue: "Name",
       dataType: STRING,
       editable: false,
@@ -32,7 +32,7 @@ const clientMasterMetaData = {
       sequence: 3
     },
     {
-      name: "broker",
+      key: "broker",
       displayValue: "Broker",
       dataType: STRING,
       editable: false,
@@ -40,7 +40,7 @@ const clientMasterMetaData = {
       sequence: 4
     },
     {
-      name: "subBroker",
+      key: "subBroker",
       displayValue: "Sub Broker",
       dataType: STRING,
       editable: false,
@@ -48,7 +48,7 @@ const clientMasterMetaData = {
       sequence: 5
     },
     {
-      name: "extraGroup",
+      key: "extraGroup",
       displayValue: "Extra Group",
       dataType: STRING,
       editable: false,
@@ -56,7 +56,7 @@ const clientMasterMetaData = {
       sequence: 6
     },
     {
-      name: "subBrokerPLRatio",
+      key: "subBrokerPLRatio",
       displayValue: "Sub Broker P&L Ratio",
       dataType: DOUBLE,
       decimalLocator: 2,
@@ -65,7 +65,7 @@ const clientMasterMetaData = {
       sequence: 7
     },
     {
-      name: "brokerPLRatio",
+      key: "brokerPLRatio",
       displayValue: "Broker P&L Ratio",
       dataType: DOUBLE,
       decimalLocator: 2,
@@ -74,7 +74,7 @@ const clientMasterMetaData = {
       sequence: 8
     },
     {
-      name: "companyPLRatio",
+      key: "companyPLRatio",
       displayValue: "Company P&L Ratio",
       dataType: DOUBLE,
       decimalLocator: 2,
@@ -83,7 +83,7 @@ const clientMasterMetaData = {
       sequence: 9
     },
     {
-      name: "brokageType",
+      key: "brokageType",
       displayValue: "Brokage Type",
       dataType: INT,
       editable: false,
@@ -91,7 +91,7 @@ const clientMasterMetaData = {
       sequence: 10
     },
     {
-      name: "clientBrokage",
+      key: "clientBrokage",
       displayValue: "Client Brokage",
       dataType: DOUBLE,
       decimalLocator: 2,
@@ -100,7 +100,7 @@ const clientMasterMetaData = {
       sequence: 11
     },
     {
-      name: "subBrokerBrokage",
+      key: "subBrokerBrokage",
       displayValue: "Sub Broker Brokage",
       dataType: DOUBLE,
       decimalLocator: 2,
@@ -109,7 +109,7 @@ const clientMasterMetaData = {
       sequence: 12
     },
     {
-      name: "bokerBrokage",
+      key: "bokerBrokage",
       displayValue: "Broker Brokage",
       dataType: DOUBLE,
       decimalLocator: 2,
@@ -118,7 +118,7 @@ const clientMasterMetaData = {
       sequence: 13
     },
     {
-      name: "companyBrokage",
+      key: "companyBrokage",
       displayValue: "Company Brokage",
       dataType: DOUBLE,
       decimalLocator: 2,
@@ -127,7 +127,7 @@ const clientMasterMetaData = {
       sequence: 14
     },
     {
-      name: "symbolWiseBuyLimit",
+      key: "symbolWiseBuyLimit",
       displayValue: "Symbol wise Buy Limit",
       dataType: DOUBLE,
       decimalLocator: 2,
@@ -136,7 +136,7 @@ const clientMasterMetaData = {
       sequence: 15
     },
     {
-      name: "symoblWiseSellLimit",
+      key: "symoblWiseSellLimit",
       displayValue: "Symbol wise Sell Limit",
       dataType: DOUBLE,
       decimalLocator: 2,
@@ -145,7 +145,7 @@ const clientMasterMetaData = {
       sequence: 16
     },
     {
-      name: "symbolWisePendingOrderEnableDisable",
+      key: "symbolWisePendingOrderEnableDisable",
       displayValue: "Symbol wise Pending Order Enable/Disable",
       dataType: STRING,
       editable: false,
@@ -153,7 +153,7 @@ const clientMasterMetaData = {
       sequence: 17
     },
     {
-      name: "symbolPositionLimit",
+      key: "symbolPositionLimit",
       displayValue: "Symbol Position Limit (Gateway)",
       dataType: STRING,
       editable: false,
@@ -161,7 +161,7 @@ const clientMasterMetaData = {
       sequence: 18
     },
     {
-      name: "symbolPendingOrderDiffFromBidAsk",
+      key: "symbolPendingOrderDiffFromBidAsk",
       displayValue: "Symbol Pending Order Difference From Bid/Ask (Gateway)",
       dataType: STRING,
       editable: false,
@@ -169,7 +169,7 @@ const clientMasterMetaData = {
       sequence: 19
     },
     {
-      name: "groupMt5",
+      key: "groupMt5",
       displayValue: "Group MT5",
       dataType: STRING,
       editable: false,
@@ -177,7 +177,7 @@ const clientMasterMetaData = {
       sequence: 20
     },
     {
-      name: "groupExtra",
+      key: "groupExtra",
       displayValue: "Group Extra",
       dataType: STRING,
       editable: false,
@@ -185,7 +185,7 @@ const clientMasterMetaData = {
       sequence: 21
     },
     {
-      name: "lossLimit",
+      key: "lossLimit",
       displayValue: "Loss Limit",
       dataType: DOUBLE,
       decimalLocator: 2,
@@ -194,7 +194,7 @@ const clientMasterMetaData = {
       sequence: 22
     },
     {
-      name: "creditLimit",
+      key: "creditLimit",
       displayValue: "Credit Limit",
       dataType: DOUBLE,
       decimalLocator: 2,
@@ -203,7 +203,7 @@ const clientMasterMetaData = {
       sequence: 23
     },
     {
-      name: "allotedLimit",
+      key: "allotedLimit",
       displayValue: "Alloted Limit",
       dataType: DOUBLE,
       decimalLocator: 2,
@@ -212,7 +212,7 @@ const clientMasterMetaData = {
       sequence: 24
     },
     {
-      name: "comment",
+      key: "comment",
       displayValue: "Comment Y/N",
       dataType: STRING,
       editable: false,
@@ -220,7 +220,7 @@ const clientMasterMetaData = {
       sequence: 25
     },
     {
-      name: "qtyLimitMultiplayer",
+      key: "qtyLimitMultiplayer",
       displayValue: "Quantity Limit Multiplayer",
       dataType: DOUBLE,
       decimalLocator: 0,
@@ -229,7 +229,7 @@ const clientMasterMetaData = {
       sequence: 26
     },
     {
-      name: "ignoreTrader",
+      key: "ignoreTrader",
       displayValue: "Ignore Trader Y/N",
       dataType: STRING,
       editable: false,
@@ -243,7 +243,7 @@ const symbolWisePositionPanelMetaData = {
   type: constants.SCRIPT_WISE_POSITION_META_DATA,
   data: [
     {
-      name: "id",
+      key: "id",
       displayValue: "Id",
       dataType: INT,
       decimalLocator: 0,
@@ -252,7 +252,7 @@ const symbolWisePositionPanelMetaData = {
       sequence: 0
     },
     {
-      name: "symbol",
+      key: "symbol",
       displayValue: "Symbol",
       dataType: STRING,
       size: 30,
@@ -262,7 +262,7 @@ const symbolWisePositionPanelMetaData = {
       sequence: 1
     },
     {
-      name: "clientQty",
+      key: "clientQty",
       displayValue: "Client Quantity",
       dataType: DOUBLE,
       decimalLocator: 2,
@@ -271,7 +271,7 @@ const symbolWisePositionPanelMetaData = {
       sequence: 2
     },
     {
-      name: "clientAvg",
+      key: "clientAvg",
       displayValue: "Client Average",
       dataType: DOUBLE,
       decimalLocator: 4,
@@ -280,7 +280,7 @@ const symbolWisePositionPanelMetaData = {
       sequence: 3
     },
     {
-      name: "clientGrossExposure",
+      key: "clientGrossExposure",
       displayValue: "Client Gross Exposure",
       dataType: DOUBLE,
       decimalLocator: 4,
@@ -289,7 +289,7 @@ const symbolWisePositionPanelMetaData = {
       sequence: 4
     },
     {
-      name: "profit",
+      key: "profit",
       displayValue: "Profit",
       dataType: DOUBLE,
       decimalLocator: 0,
@@ -298,7 +298,7 @@ const symbolWisePositionPanelMetaData = {
       sequence: 5
     },
     {
-      name: "companyQty",
+      key: "companyQty",
       displayValue: "Company Quantity",
       dataType: DOUBLE,
       decimalLocator: 2,
@@ -307,7 +307,7 @@ const symbolWisePositionPanelMetaData = {
       sequence: 6
     },
     {
-      name: "companyAvg",
+      key: "companyAvg",
       displayValue: "Company Average",
       dataType: DOUBLE,
       decimalLocator: 0,
@@ -316,7 +316,7 @@ const symbolWisePositionPanelMetaData = {
       sequence: 7
     },
     {
-      name: "lastRate",
+      key: "lastRate",
       displayValue: "Last Rate",
       dataType: DOUBLE,
       decimalLocator: 4,
@@ -325,7 +325,7 @@ const symbolWisePositionPanelMetaData = {
       sequence: 8
     },
     {
-      name: "companyBrokarage",
+      key: "companyBrokarage",
       displayValue: "Company Brokarage",
       dataType: DOUBLE,
       decimalLocator: 0,
@@ -334,7 +334,7 @@ const symbolWisePositionPanelMetaData = {
       sequence: 9
     },
     {
-      name: "companyPL",
+      key: "companyPL",
       displayValue: "Company P&L",
       dataType: DOUBLE,
       decimalLocator: 2,
@@ -343,7 +343,7 @@ const symbolWisePositionPanelMetaData = {
       sequence: 10
     },
     {
-      name: "companyExposure",
+      key: "companyExposure",
       displayValue: "Company Exposure",
       dataType: DOUBLE,
       decimalLocator: 0,
@@ -352,7 +352,7 @@ const symbolWisePositionPanelMetaData = {
       sequence: 11
     },
     {
-      name: "multiplayer",
+      key: "multiplayer",
       displayValue: "Multiplayer",
       dataType: INT,
       decimalLocator: 0,
@@ -367,7 +367,7 @@ const netPositionPanelMetaData = {
   type: constants.NET_POSITION_META_DATA,
   data: [
     {
-      "name": "id",
+      "key": "id",
       "displayValue": "Id",
       "dataType": DOUBLE,
       "decimalLocator": null,
@@ -376,7 +376,7 @@ const netPositionPanelMetaData = {
       "sequence": 0
     },
     {
-      "name": "login",
+      "key": "login",
       "displayValue": "Login",
       "dataType": STRING,
       "size": 15,
@@ -386,7 +386,7 @@ const netPositionPanelMetaData = {
       "sequence": 1
     },
     {
-      "name": "name",
+      "key": "name",
       "displayValue": "Name",
       "dataType": STRING,
       "size": 30,
@@ -396,7 +396,7 @@ const netPositionPanelMetaData = {
       "sequence": 2
     },
     {
-      "name": "symbol",
+      "key": "symbol",
       "displayValue": "Symbol",
       "dataType": STRING,
       "size": 30,
@@ -406,7 +406,7 @@ const netPositionPanelMetaData = {
       "sequence": 3
     },
     {
-      "name": "prevVol",
+      "key": "prevVol",
       "displayValue": "Previous Volume",
       "dataType": DOUBLE,
       "decimalLocator": 2,
@@ -415,7 +415,7 @@ const netPositionPanelMetaData = {
       "sequence": 4
     },
     {
-      "name": "volDiff",
+      "key": "volDiff",
       "displayValue": "Volume Diff",
       "dataType": DOUBLE,
       "decimalLocator": 2,
@@ -424,7 +424,7 @@ const netPositionPanelMetaData = {
       "sequence": 5
     },
     {
-      "name": "volume",
+      "key": "volume",
       "displayValue": "Volume",
       "dataType": DOUBLE,
       "decimalLocator": 2,
@@ -433,7 +433,7 @@ const netPositionPanelMetaData = {
       "sequence": 6
     },
     {
-      "name": "avgMt5",
+      "key": "avgMt5",
       "displayValue": "Average MT5",
       "dataType": DOUBLE,
       "decimalLocator": 2,
@@ -442,7 +442,7 @@ const netPositionPanelMetaData = {
       "sequence": 7
     },
     {
-      "name": "lastRate",
+      "key": "lastRate",
       "displayValue": "Last Rate",
       "dataType": DOUBLE,
       "decimalLocator": 2,
@@ -451,7 +451,7 @@ const netPositionPanelMetaData = {
       "sequence": 8
     },
     {
-      "name": "profLoss",
+      "key": "profLoss",
       "displayValue": "Profit & Loss",
       "dataType": DOUBLE,
       "decimalLocator": 0,
@@ -460,7 +460,7 @@ const netPositionPanelMetaData = {
       "sequence": 9
     },
     {
-      "name": "clientBal",
+      "key": "clientBal",
       "displayValue": "Client Balance",
       "dataType": DOUBLE,
       "decimalLocator": 0,
@@ -469,7 +469,7 @@ const netPositionPanelMetaData = {
       "sequence": 10
     },
     {
-      "name": "brokerBal",
+      "key": "brokerBal",
       "displayValue": "Broker Balance",
       "dataType": DOUBLE,
       "decimalLocator": 0,
@@ -478,7 +478,7 @@ const netPositionPanelMetaData = {
       "sequence": 11
     },
     {
-      "name": "subBrokerBal",
+      "key": "subBrokerBal",
       "displayValue": "Sub Broker Balance",
       "dataType": DOUBLE,
       "decimalLocator": 0,
@@ -487,7 +487,7 @@ const netPositionPanelMetaData = {
       "sequence": 12
     },
     {
-      "name": "compBal",
+      "key": "compBal",
       "displayValue": "Company Balance",
       "dataType": DOUBLE,
       "decimalLocator": 0,
@@ -496,7 +496,7 @@ const netPositionPanelMetaData = {
       "sequence": 13
     },
     {
-      "name": "lastUpdated",
+      "key": "lastUpdated",
       "displayValue": "Last Updated",
       "dataType": INT,
       "decimalLocator": null,
@@ -505,7 +505,7 @@ const netPositionPanelMetaData = {
       "sequence": 14
     },
     {
-      "name": "groupMt5",
+      "key": "groupMt5",
       "displayValue": "Group MT5",
       "dataType": STRING,
       "size": 30,
@@ -515,7 +515,7 @@ const netPositionPanelMetaData = {
       "sequence": 15
     },
     {
-      "name": "groupExtra",
+      "key": "groupExtra",
       "displayValue": "Group Extra",
       "dataType": STRING,
       "size": 30,
@@ -525,7 +525,7 @@ const netPositionPanelMetaData = {
       "sequence": 16
     },
     {
-      "name": "checkedStatus",
+      "key": "checkedStatus",
       "displayValue": "Checked Status",
       "dataType": STRING,
       "size": 30,
@@ -535,7 +535,7 @@ const netPositionPanelMetaData = {
       "sequence": 17
     },
     {
-      "name": "allotedLimit",
+      "key": "allotedLimit",
       "displayValue": "Alloted Limit",
       "dataType": DOUBLE,
       "decimalLocator": 0,
@@ -544,7 +544,7 @@ const netPositionPanelMetaData = {
       "sequence": 18
     },
     {
-      "name": "lossLimit",
+      "key": "lossLimit",
       "displayValue": "Loss Limit",
       "dataType": DOUBLE,
       "decimalLocator": 0,
@@ -553,7 +553,7 @@ const netPositionPanelMetaData = {
       "sequence": 19
     },
     {
-      "name": "avgRateAccounting",
+      "key": "avgRateAccounting",
       "displayValue": "Average Rate Accounting",
       "dataType": DOUBLE,
       "decimalLocator": 2,
@@ -562,7 +562,7 @@ const netPositionPanelMetaData = {
       "sequence": 20
     },
     {
-      "name": "balMt5",
+      "key": "balMt5",
       "displayValue": "Balance MT5",
       "dataType": DOUBLE,
       "decimalLocator": 0,
@@ -571,7 +571,7 @@ const netPositionPanelMetaData = {
       "sequence": 21
     },
     {
-      "name": "settledTradeVol",
+      "key": "settledTradeVol",
       "displayValue": "Settled Trade volume",
       "dataType": DOUBLE,
       "decimalLocator": 2,
@@ -580,7 +580,7 @@ const netPositionPanelMetaData = {
       "sequence": 22
     },
     {
-      "name": "marginLive",
+      "key": "marginLive",
       "displayValue": "Margin Live",
       "dataType": DOUBLE,
       "decimalLocator": 0,
@@ -589,7 +589,7 @@ const netPositionPanelMetaData = {
       "sequence": 23
     },
     {
-      "name": "creditLimit",
+      "key": "creditLimit",
       "displayValue": "Credit Limit ",
       "dataType": DOUBLE,
       "decimalLocator": 0,
@@ -598,7 +598,7 @@ const netPositionPanelMetaData = {
       "sequence": 24
     },
     {
-      "name": "clientBrokaragePercentage",
+      "key": "clientBrokaragePercentage",
       "displayValue": "Client Brokage %",
       "dataType": DOUBLE,
       "decimalLocator": 2,
@@ -607,7 +607,7 @@ const netPositionPanelMetaData = {
       "sequence": 25
     },
     {
-      "name": "subBrokaragePercentage",
+      "key": "subBrokaragePercentage",
       "displayValue": "Sub Brokarage %",
       "dataType": DOUBLE,
       "decimalLocator": 2,
@@ -616,7 +616,7 @@ const netPositionPanelMetaData = {
       "sequence": 26
     },
     {
-      "name": "brokerBrokaragePercentage",
+      "key": "brokerBrokaragePercentage",
       "displayValue": "Broker Brokarage %",
       "dataType": DOUBLE,
       "decimalLocator": 2,
@@ -625,7 +625,7 @@ const netPositionPanelMetaData = {
       "sequence": 27
     },
     {
-      "name": "compBrokaragePercentage",
+      "key": "compBrokaragePercentage",
       "displayValue": "Company Brokarage %",
       "dataType": DOUBLE,
       "decimalLocator": 2,
@@ -634,7 +634,7 @@ const netPositionPanelMetaData = {
       "sequence": 28
     },
     {
-      "name": "clientProfLossPercentage",
+      "key": "clientProfLossPercentage",
       "displayValue": "Client P&L %",
       "dataType": DOUBLE,
       "decimalLocator": 2,
@@ -643,7 +643,7 @@ const netPositionPanelMetaData = {
       "sequence": 29
     },
     {
-      "name": "subProfLossPercentage",
+      "key": "subProfLossPercentage",
       "displayValue": "Sub P&L %",
       "dataType": DOUBLE,
       "decimalLocator": 2,
@@ -652,7 +652,7 @@ const netPositionPanelMetaData = {
       "sequence": 30
     },
     {
-      "name": "brokerProfLossPercentage",
+      "key": "brokerProfLossPercentage",
       "displayValue": "Broker P&L %",
       "dataType": DOUBLE,
       "decimalLocator": 2,
@@ -661,7 +661,7 @@ const netPositionPanelMetaData = {
       "sequence": 31
     },
     {
-      "name": "compProfLossPercentage",
+      "key": "compProfLossPercentage",
       "displayValue": "Company P&L %",
       "dataType": DOUBLE,
       "decimalLocator": 2,
@@ -670,7 +670,7 @@ const netPositionPanelMetaData = {
       "sequence": 32
     },
     {
-      "name": "clientBrokarageTotal",
+      "key": "clientBrokarageTotal",
       "displayValue": "Client Brokage Total",
       "dataType": DOUBLE,
       "decimalLocator": 2,
@@ -679,7 +679,7 @@ const netPositionPanelMetaData = {
       "sequence": 33
     },
     {
-      "name": "subBrokarageTotal",
+      "key": "subBrokarageTotal",
       "displayValue": "Sub Brokarage Total",
       "dataType": DOUBLE,
       "decimalLocator": 2,
@@ -688,7 +688,7 @@ const netPositionPanelMetaData = {
       "sequence": 34
     },
     {
-      "name": "brokerBrokarageTotal",
+      "key": "brokerBrokarageTotal",
       "displayValue": "Broker Brokarage Total",
       "dataType": DOUBLE,
       "decimalLocator": 2,
@@ -697,7 +697,7 @@ const netPositionPanelMetaData = {
       "sequence": 35
     },
     {
-      "name": "companyBrokarageTotal",
+      "key": "companyBrokarageTotal",
       "displayValue": "Company Brokarage Total",
       "dataType": DOUBLE,
       "decimalLocator": 2,
@@ -706,7 +706,7 @@ const netPositionPanelMetaData = {
       "sequence": 36
     },
     {
-      "name": "grossExposure",
+      "key": "grossExposure",
       "displayValue": "Gross Exposure",
       "dataType": DOUBLE,
       "decimalLocator": 0,
@@ -715,7 +715,7 @@ const netPositionPanelMetaData = {
       "sequence": 37
     },
     {
-      "name": "brokerExosure",
+      "key": "brokerExosure",
       "displayValue": "Broker Exosure",
       "dataType": DOUBLE,
       "decimalLocator": 0,
@@ -724,7 +724,7 @@ const netPositionPanelMetaData = {
       "sequence": 38
     },
     {
-      "name": "subBrokerExposure",
+      "key": "subBrokerExposure",
       "displayValue": "Sub Broker Exposure",
       "dataType": DOUBLE,
       "decimalLocator": 0,
@@ -733,7 +733,7 @@ const netPositionPanelMetaData = {
       "sequence": 39
     },
     {
-      "name": "companyExposure",
+      "key": "companyExposure",
       "displayValue": "Company Exposure",
       "dataType": DOUBLE,
       "decimalLocator": 0,
@@ -742,7 +742,7 @@ const netPositionPanelMetaData = {
       "sequence": 40
     },
     {
-      "name": "expectedProfLoss",
+      "key": "expectedProfLoss",
       "displayValue": "Expected PL",
       "dataType": DOUBLE,
       "decimalLocator": 0,
@@ -751,7 +751,7 @@ const netPositionPanelMetaData = {
       "sequence": 41
     },
     {
-      "name": "totalQtyByExchange",
+      "key": "totalQtyByExchange",
       "displayValue": "Total Lot qty According to Exchange",
       "dataType": DOUBLE,
       "decimalLocator": 2,
@@ -760,7 +760,7 @@ const netPositionPanelMetaData = {
       "sequence": 42
     },
     {
-      "name": "compLotQtyByExchange",
+      "key": "compLotQtyByExchange",
       "displayValue": "Company Lot qty According to Exchange",
       "dataType": DOUBLE,
       "decimalLocator": 2,
@@ -769,7 +769,7 @@ const netPositionPanelMetaData = {
       "sequence": 43
     },
     {
-      "name": "extraLot",
+      "key": "extraLot",
       "displayValue": "Extra Lot",
       "dataType": DOUBLE,
       "decimalLocator": 2,
@@ -784,7 +784,7 @@ const orderDataMetaData = {
   type: constants.ORDER_META_DATA,
   data: [
     {
-      "name": "login",
+      "key": "login",
       "displayValue": "Login",
       "dataType": STRING,
       "editable": false,
@@ -792,7 +792,7 @@ const orderDataMetaData = {
       "sequence": 1
     },
     {
-      "name": "name",
+      "key": "name",
       "displayValue": "Name",
       "dataType": STRING,
       "editable": false,
@@ -800,7 +800,7 @@ const orderDataMetaData = {
       "sequence": 2
     },
     {
-      "name": "symbol",
+      "key": "symbol",
       "displayValue": "Symbol",
       "dataType": STRING,
       "size": 30,
@@ -809,7 +809,7 @@ const orderDataMetaData = {
       "sequence": 3
     },
     {
-      "name": "netQuantity",
+      "key": "netQuantity",
       "displayValue": "Net Quantity",
       "dataType": DOUBLE,
       "decimalLocator": 2,
@@ -818,7 +818,7 @@ const orderDataMetaData = {
       "sequence": 4
     },
     {
-      "name": "clientBrokarage",
+      "key": "clientBrokarage",
       "displayValue": "Client Brokarage",
       "dataType": DOUBLE,
       "decimalLocator": 2,
@@ -827,7 +827,7 @@ const orderDataMetaData = {
       "sequence": 5
     },
     {
-      "name": "subBroker",
+      "key": "subBroker",
       "displayValue": "Sub Broker",
       "dataType": STRING,
       "size": 30,
@@ -836,7 +836,7 @@ const orderDataMetaData = {
       "sequence": 6
     },
     {
-      "name": "brokarage",
+      "key": "brokarage",
       "displayValue": "Brokarage",
       "dataType": DOUBLE,
       "decimalLocator": 2,
@@ -845,7 +845,7 @@ const orderDataMetaData = {
       "sequence": 7
     },
     {
-      "name": "brokerBrokarage",
+      "key": "brokerBrokarage",
       "displayValue": "Broker Brokarage",
       "dataType": DOUBLE,
       "decimalLocator": 2,
@@ -854,7 +854,7 @@ const orderDataMetaData = {
       "sequence": 8
     },
     {
-      "name": "compBrokarage",
+      "key": "compBrokarage",
       "displayValue": "Company Brokarage",
       "dataType": DOUBLE,
       "decimalLocator": 2,
