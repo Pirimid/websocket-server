@@ -4,6 +4,241 @@ const DOUBLE = "double";
 const STRING = "string";
 const INT = "int";
 
+const clientMaster = {
+  type: constants.FETCH_CLIENT_MASTER_DATA,
+  data: [
+    {
+      name: "login",
+      displayValue: "Login",
+      dataType: INT,
+      editable: false,
+      hidden: false,
+      sequence: 1
+    },
+    {
+      name: "symbol",
+      displayValue: "Symbol",
+      dataType: STRING,
+      editable: false,
+      hidden: false,
+      sequence: 2
+    },
+    {
+      name: "name",
+      displayValue: "Name",
+      dataType: STRING,
+      editable: false,
+      hidden: false,
+      sequence: 3
+    },
+    {
+      name: "broker",
+      displayValue: "Broker",
+      dataType: STRING,
+      editable: false,
+      hidden: false,
+      sequence: 4
+    },
+    {
+      name: "subBroker",
+      displayValue: "Sub Broker",
+      dataType: STRING,
+      editable: false,
+      hidden: false,
+      sequence: 5
+    },
+    {
+      name: "extraGroup",
+      displayValue: "Extra Group",
+      dataType: STRING,
+      editable: false,
+      hidden: false,
+      sequence: 6
+    },
+    {
+      name: "subBrokerPLRatio",
+      displayValue: "Sub Broker P&L Ratio",
+      dataType: DOUBLE,
+      decimalLocator: 2,
+      editable: false,
+      hidden: false,
+      sequence: 7
+    },
+    {
+      name: "brokerPLRatio",
+      displayValue: "Broker P&L Ratio",
+      dataType: DOUBLE,
+      decimalLocator: 2,
+      editable: false,
+      hidden: false,
+      sequence: 8
+    },
+    {
+      name: "companyPLRatio",
+      displayValue: "Company P&L Ratio",
+      dataType: DOUBLE,
+      decimalLocator: 2,
+      editable: false,
+      hidden: false,
+      sequence: 9
+    },
+    {
+      name: "brokageType",
+      displayValue: "Brokage Type",
+      dataType: INT,
+      editable: false,
+      hidden: false,
+      sequence: 10
+    },
+    {
+      name: "clientBrokage",
+      displayValue: "Client Brokage",
+      dataType: DOUBLE,
+      decimalLocator: 2,
+      editable: false,
+      hidden: false,
+      sequence: 11
+    },
+    {
+      name: "subBrokerBrokage",
+      displayValue: "Sub Broker Brokage",
+      dataType: DOUBLE,
+      decimalLocator: 2,
+      editable: false,
+      hidden: false,
+      sequence: 12
+    },
+    {
+      name: "bokerBrokage",
+      displayValue: "Broker Brokage",
+      dataType: DOUBLE,
+      decimalLocator: 2,
+      editable: false,
+      hidden: false,
+      sequence: 13
+    },
+    {
+      name: "companyBrokage",
+      displayValue: "Company Brokage",
+      dataType: DOUBLE,
+      decimalLocator: 2,
+      editable: false,
+      hidden: false,
+      sequence: 14
+    },
+    {
+      name: "symbolWiseBuyLimit",
+      displayValue: "Symbol wise Buy Limit",
+      dataType: DOUBLE,
+      decimalLocator: 2,
+      editable: false,
+      hidden: false,
+      sequence: 15
+    },
+    {
+      name: "symoblWiseSellLimit",
+      displayValue: "Symbol wise Sell Limit",
+      dataType: DOUBLE,
+      decimalLocator: 2,
+      editable: false,
+      hidden: false,
+      sequence: 16
+    },
+    {
+      name: "symbolWisePendingOrderEnableDisable",
+      displayValue: "Symbol wise Pending Order Enable/Disable",
+      dataType: STRING,
+      editable: false,
+      hidden: false,
+      sequence: 17
+    },
+    {
+      name: "symbolPositionLimit",
+      displayValue: "Symbol Position Limit (Gateway)",
+      dataType: STRING,
+      editable: false,
+      hidden: false,
+      sequence: 18
+    },
+    {
+      name: "symbolPendingOrderDiffFromBidAsk",
+      displayValue: "Symbol Pending Order Difference From Bid/Ask (Gateway)",
+      dataType: STRING,
+      editable: false,
+      hidden: false,
+      sequence: 19
+    },
+    {
+      name: "groupMt5",
+      displayValue: "Group MT5",
+      dataType: STRING,
+      editable: false,
+      hidden: false,
+      sequence: 20
+    },
+    {
+      name: "groupExtra",
+      displayValue: "Group Extra",
+      dataType: STRING,
+      editable: false,
+      hidden: false,
+      sequence: 21
+    },
+    {
+      name: "lossLimit",
+      displayValue: "Loss Limit",
+      dataType: DOUBLE,
+      decimalLocator: 2,
+      editable: false,
+      hidden: false,
+      sequence: 22
+    },
+    {
+      name: "creditLimit",
+      displayValue: "Credit Limit",
+      dataType: DOUBLE,
+      decimalLocator: 2,
+      editable: false,
+      hidden: false,
+      sequence: 23
+    },
+    {
+      name: "allotedLimit",
+      displayValue: "Alloted Limit",
+      dataType: DOUBLE,
+      decimalLocator: 2,
+      editable: false,
+      hidden: false,
+      sequence: 24
+    },
+    {
+      name: "comment",
+      displayValue: "Comment Y/N",
+      dataType: STRING,
+      editable: false,
+      hidden: false,
+      sequence: 25
+    },
+    {
+      name: "qtyLimitMultiplayer",
+      displayValue: "Quantity Limit Multiplayer",
+      dataType: DOUBLE,
+      decimalLocator: 0,
+      editable: false,
+      hidden: false,
+      sequence: 26
+    },
+    {
+      name: "ignoreTrader",
+      displayValue: "Ignore Trader Y/N",
+      dataType: STRING,
+      editable: false,
+      hidden: false,
+      sequence: 27
+    }
+  ]
+}
+
 const symbolWisePositionPanelMetaData = {
   type: constants.SCRIPT_WISE_POSITION_META_DATA,
   data: [
@@ -630,8 +865,4 @@ const orderDataMetaData = {
   ]
 };
 
-module.exports = {
-  symbolWisePositionPanelMetaData,
-  netPositionPanelMetaData,
-  orderDataMetaData
-};
+module.exports = { clientMaster, symbolWisePositionPanelMetaData, netPositionPanelMetaData, orderDataMetaData };
