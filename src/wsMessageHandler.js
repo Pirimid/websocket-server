@@ -52,7 +52,7 @@ function sendClientMasterData(webSocket) {
 
 function startSendingTickData(webSocket) {
   let tickDataInterval = setInterval(() => {
-    if (webSocket.readyState !== 3) {
+    if (webSocket.readyState === 1) {
       sendTickData(webSocket);
     } else {
       clearInterval(tickDataInterval);
@@ -71,7 +71,7 @@ function sendTickData(webSocket) {
 startSendingDataToClient = (webSocket) => {
   sendMessage(webSocket, sampleData.symbolWisePositionData);
   let updatesInterval = setInterval(() => {
-    if (webSocket.readyState !== 3) {
+    if (webSocket.readyState === 1) {
       sendUpdates(webSocket);
     } else {
       clearInterval(updatesInterval);
@@ -82,7 +82,7 @@ startSendingDataToClient = (webSocket) => {
 sendOrderData = (webSocket) => {
   sendMessage(webSocket, sampleData.orderData);
   let orderDataInterval = setInterval(() => {
-    if (webSocket.readyState !== 3) {
+    if (webSocket.readyState === 1) {
       sendNewOrderData(webSocket);
     } else {
       clearInterval(orderDataInterval);
