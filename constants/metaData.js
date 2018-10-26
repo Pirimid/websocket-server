@@ -81,13 +81,22 @@ const symbolWisePositionPanelMetaData = {
       sequence: 7
     },
     {
+      name: "lastRate",
+      displayValue: "Last Rate",
+      dataType: DOUBLE,
+      decimalLocator: 4,
+      editable: false,
+      hidden: false,
+      sequence: 8
+    },
+    {
       name: "companyBrokarage",
       displayValue: "Company Brokarage",
       dataType: DOUBLE,
       decimalLocator: 0,
       editable: false,
       hidden: false,
-      sequence: 8
+      sequence: 9
     },
     {
       name: "companyPL",
@@ -115,16 +124,7 @@ const symbolWisePositionPanelMetaData = {
       editable: false,
       hidden: false,
       sequence: 12
-    },
-    {
-      name: "lastRate",
-      displayValue: "Last Rate",
-      dataType: DOUBLE,
-      decimalLocator: 4,
-      editable: false,
-      hidden: false,
-      sequence: 13
-    },
+    }
   ]
 };
 

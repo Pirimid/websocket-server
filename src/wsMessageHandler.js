@@ -5,12 +5,12 @@ const constants = require("../constants/constants");
 
 const MessageHandlers = {
   [constants.FETCH_SCRIPT_WISE_POSITOINS_META_DATA]: (webSocket) => sendMessage(webSocket, metaData.symbolWisePositionPanelMetaData),
-  [constants.FETCH_SCRIPT_WISE_POSITIONS]: (webSocket) => startSendingTickData(webSocket),
+  [constants.FETCH_SCRIPT_WISE_POSITIONS]: (webSocket) => sendTickData(webSocket),
   [constants.FETCH_NET_POSITION_META_DATA]: (webSocket) => sendMessage(webSocket, metaData.netPositionPanelMetaData),
-  [constants.FETCH_NET_POSITIONS]: (webSocket) =>  sendMessage(webSocket, sampleData.netPositionData),
-  [constants.FETCH_TICK_DATA]: (webSocket) => setInterval(() => startSendingTickData(webSocket), 500),
+  [constants.FETCH_NET_POSITIONS]: (webSocket) => sendMessage(webSocket, sampleData.netPositionData),
+  [constants.FETCH_TICK_DATA]: (webSocket) => startSendingTickData(webSocket),
   [constants.FETCH_ORDER_META_DATA]: (webSocket) => sendMessage(webSocket, metaData.orderDataMetaData),
-  [constants.FETCH_ORDER_DATA]: (webSocket) => sendMarketData(webSocket)
+  [constants.FETCH_ORDER_DATA]: (webSocket) => sendOrderData(webSocket)
 };
 
 function registerEventListenersOnSocketIO(webSocket) {
@@ -28,7 +28,7 @@ function registerEventListenersOnStdWebSocket(webSocket) {
 
 function handleMessage(webSocket, message) {
   let msg = JSON.parse(message);
-  if(MessageHandlers[msg.type] instanceof Function) {
+  if (MessageHandlers[msg.type] instanceof Function) {
     MessageHandlers[msg.type](webSocket, msg)
   } else {
     console.log("No message handler is defined for message type: ", msg.type);
@@ -41,6 +41,16 @@ function sendMessage(webSocket, message) {
 }
 
 function startSendingTickData(webSocket) {
+  let tickDataInterval = setInterval(() => {
+    if (webSocket.readyState !== 3) {
+      sendTickData(webSocket);
+    } else {
+      clearInterval(tickDataInterval);
+    }
+  }, 500);
+}
+
+function sendTickData(webSocket) {
   const sampleTickData = [];
   sampleData.tickData.data.forEach(tickData => {
     sampleTickData.push({ ...tickData, last: getNewValue(tickData.bid) });
@@ -50,12 +60,24 @@ function startSendingTickData(webSocket) {
 
 startSendingDataToClient = (webSocket) => {
   sendMessage(webSocket, sampleData.symbolWisePositionData);
-  setInterval(() => sendUpdates(webSocket), 500);
+  let updatesInterval = setInterval(() => {
+    if (webSocket.readyState !== 3) {
+      sendUpdates(webSocket);
+    } else {
+      clearInterval(updatesInterval);
+    }
+  }, 500);
 }
 
-sendMarketData = (webSocket) => {
+sendOrderData = (webSocket) => {
   sendMessage(webSocket, sampleData.orderData);
-  setInterval(() => sendNewOrderData(webSocket), 1000);
+  let orderDataInterval = setInterval(() => {
+    if (webSocket.readyState !== 3) {
+      sendNewOrderData(webSocket);
+    } else {
+      clearInterval(orderDataInterval);
+    }
+  }, 1000);
 }
 
 sendNewOrderData = (webSocket) => {
@@ -72,7 +94,7 @@ sendNewOrderData = (webSocket) => {
 const sendUpdates = (webSocket) => sendMessage(webSocket, generateNewUpdatedData());
 
 const generateNewUpdatedData = () => {
-  const data = sampleData.symbolWisePositionData.data.map(symbol => ({ id: symbol.id, avgPrice: getNewValue(symbol.avgPrice) }));
+  const data = sampleData.symbolWisePositionData.data.map(symbol => ({ id: symbol.id, clientAvg: getNewValue(symbol.clientAvg) }));
   const updatedData = { type: constants.SCRIPT_WISE_POSITIONS_DATA_UPDATED, data };
   return updatedData;
 }
