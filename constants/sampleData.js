@@ -3,29 +3,28 @@ const constants = require("./constants");
 const symbolWisePositionData = {
   type: constants.SCRIPT_WISE_POSITIONS_DATA,
   data: [
-    { id: 1, symbol: "COPPERNOV", volumeCompany: -24, avgPrice: 457.3321, lastRate: 455.0501, profitLoss: 54800, compVolume: -15.68, compProfLoss: 85214, compExposure: 3004, grossExposure: 5846, grossVolume: 25.26, grossProfLoss: 95624, multiplayer: 50 },
-    { id: 2, symbol: "CRUDEOCT", volumeCompany: -374, avgPrice: 5565.2021, lastRate: 5468.2014, profitLoss: 3635100, compVolume: -234.96, compProfLoss: 2264740, compExposure: 32456, grossExposure: 52146, grossVolume: 325.21, grossProfLoss: 5214523, multiplayer: 100 },
-    { id: 3, symbol: "NICKELOCT", volumeCompany: -42, avgPrice: 1213.4125, lastRate: 1200.1001, profitLoss: 55480, compVolume: -40.32, compProfLoss: 44265, compExposure: 2314, grossExposure: 3215, grossVolume: 21.24, grossProfLoss: 54213, multiplayer: 25 },
-    { id: 4, symbol: "NATURALOCT", volumeCompany: 16.55, avgPrice: 4571205.2142, lastRate: 1200.1001, profitLoss: -2912, compVolume: 16.55, compProfLoss: -2912, compExposure: 1524, grossExposure: 2145, grossVolume: 35.45, grossProfLoss: -3546, multiplayer: 40 },
-    { id: 5, symbol: "GOLDDEC", volumeCompany: -1545.00, avgPrice: 31695.42, lastRate: 31435.00, profitLoss: 40235400, compVolume: -1122, compProfLoss: 28073792, compExposure: 59842, grossExposure: 74521, grossVolume: -4512, grossProfLoss: 32104586, multiplayer: 100 },
-    { id: 6, symbol: "LEADOCT", volumeCompany: 25.00, avgPrice: 148.0745, lastRate: 146.7014, profitLoss: -171500, compVolume: 9, compProfLoss: -81287, compExposure: 2141, grossExposure: 3214, grossVolume: 32, grossProfLoss: -90457, multiplayer: 5000 },
-    { id: 7, symbol: "SILVERDEC", volumeCompany: 7.00, avgPrice: 37840.7124, lastRate: 39274.1242, profitLoss: 10033, compVolume: 7, compProfLoss: 10033, compExposure: 214, grossExposure: 365, grossVolume: 14, grossProfLoss: 21243, multiplayer: 500 },
-    { id: 8, symbol: "MINIGOLDDEC", volumeCompany: -2152.00, avgPrice: 32164.77, lastRate: 31435.00, profitLoss: 4729510, compVolume: -1778, compProfLoss: 3923896, compExposure: -980, grossExposure: -4572, grossVolume: -2415, grossProfLoss: 4152342, multiplayer: 300 }
+    { "symbol": "GOLDDEC", "clientQty": 4, "clientAvg": 30972.5, "clientGrossExposure": 12389000, "profit": 11000, "companyQty": -6.97, "companyAvg": -30977.9, "lastRate": 31000, "companyBrokarage": 21281, "companyPL": 5153, "companyExposure": 21591597, "multiplayer": 100 },
+    { "symbol": "SILVERDEC", "clientQty": -17, "clientAvg": 37819.18, "clientGrossExposure": -19287780, "profit": -602220, "companyQty": 11.91, "companyAvg": -37538.4, "lastRate": 39000, "companyBrokarage": 23247, "companyPL": 544841, "companyExposure": -13414722, "multiplayer": 30 },
+    { "symbol": "COPPERNOV", "clientQty": 5, "clientAvg": 441, "clientGrossExposure": 110250, "profit": 3812.5, "companyQty": -6.26, "companyAvg": -445.76, "lastRate": 456.25, "companyBrokarage": 23540, "companyPL": 19531, "companyExposure": 139567, "multiplayer": 50 },
+    { "symbol": "ZINCOCT", "clientQty": -21, "clientAvg": 196.32, "clientGrossExposure": -20613500, "profit": -24250, "companyQty": 8.61, "companyAvg": -196.83, "lastRate": 196.55, "companyBrokarage": 20178, "companyPL": 7293, "companyExposure": -8477569, "multiplayer": 5000 },
+    { "symbol": "LEADOCT", "clientQty": 22, "clientAvg": 151.91, "clientGrossExposure": 16710000, "profit": -100000, "companyQty": -22.98, "companyAvg": -152, "lastRate": 151, "companyBrokarage": 21381, "companyPL": 135857, "companyExposure": 17463590, "multiplayer": 5000 },
+    { "symbol": "NICKELOCT", "clientQty": -6, "clientAvg": 926.17, "clientGrossExposure": -138925, "profit": 670, "companyQty": 6.11, "companyAvg": -927.79, "lastRate": 921.7, "companyBrokarage": 20236, "companyPL": 18582, "companyExposure": -141673, "multiplayer": 25 },
+    { "symbol": "NATURALOCT", "clientQty": 1, "clientAvg": 252, "clientGrossExposure": 315000, "profit": -16500, "companyQty": -10.08, "companyAvg": -236.61, "lastRate": 238.8, "companyBrokarage": 19818, "companyPL": -8469, "companyExposure": 2980720, "multiplayer": 1250 },
+    { "symbol": "CRUDEOCT", "clientQty": -10, "clientAvg": 5287.5, "clientGrossExposure": -5287500, "profit": -7500, "companyQty": 10.49, "companyAvg": -5288.94, "lastRate": 5295, "companyBrokarage": 18547, "companyPL": 24180, "companyExposure": -5550216, "multiplayer": 100 }
   ]
 };
 
 const tickData = {
   type: constants.TICK_DATA,
   data: [
-    { "symbol": "PB3M", "bid": 2055.50, "ask": 2058.00, "last": 0.00, "ticktime": 1539770497 },
-    { "symbol": "CRUDEOCT", "bid": 5286.00, "ask": 5288.00, "last": 0.00, "ticktime": 1539770496 },
-    { "symbol": "CRUDEOILc2", "bid": 5291.00, "ask": 5293.00, "last": 0.00, "ticktime": 1539770497 },
-    { "symbol": "MCXABVCOSTGL", "bid": 70.00, "ask": 70.00, "last": 0.00, "ticktime": 1539770497 },
-    { "symbol": "XAU", "bid": 1222.42, "ask": 1222.55, "last": 0.00, "ticktime": 1539770497 },
-    { "symbol": "XAU", "bid": 1222.42, "ask": 1222.56, "last": 0.00, "ticktime": 1539770497 },
+    { "symbol": "GOLDDEC", "bid": 2055.50, "ask": 2058.00, "last": 0.00, "ticktime": 1539770497 },
+    { "symbol": "SILVERDEC", "bid": 5291.00, "ask": 5293.00, "last": 0.00, "ticktime": 1539770497 },
+    { "symbol": "COPPERNOV", "bid": 70.00, "ask": 70.00, "last": 0.00, "ticktime": 1539770497 },
+    { "symbol": "ZINCOCT", "bid": 1222.42, "ask": 1222.55, "last": 0.00, "ticktime": 1539770497 },
+    { "symbol": "LEADOCT", "bid": 31806.00, "ask": 31811.00, "last": 0.00, "ticktime": 1539770497 },
     { "symbol": "NICKELOCT", "bid": 38796.00, "ask": 38800.00, "last": 0.00, "ticktime": 1539770497 },
-    { "symbol": "GOLDC1", "bid": 31806.00, "ask": 31811.00, "last": 0.00, "ticktime": 1539770497 },
-    { "symbol": "MCXBLWNXTG", "bid": 251.00, "ask": 251.00, "last": 0.00, "ticktime": 1539770497 }
+    { "symbol": "NATURALOCT", "bid": 251.00, "ask": 251.00, "last": 0.00, "ticktime": 1539770497 },
+    { "symbol": "CRUDEOCT", "bid": 5286.00, "ask": 5288.00, "last": 0.00, "ticktime": 1539770496 }
   ]
 };
 
@@ -139,13 +138,13 @@ const netPositionData =
 const orderData = {
   type: constants.ORDER_DATA,
   data: [
-    { "login": 100, "name": "John", "symbol": "GOLDDEC", "netQuantity": 9.00, "clientBrokarage": 14345.98, "subBroker": "Sub Broker 1", "brokarage": 123.12, "brokerBrokarage": 0, "compBrokarage": 1233.12 },
-    { "login": 100, "name": "John", "symbol": "SILVERDEC", "netQuantity": 4.00, "clientBrokarage": 4312.12, "subBroker": "Sub Broker 1", "brokarage": 123.23, "brokerBrokarage": 0, "compBrokarage": 4312.21 },
-    { "login": 101, "name": "Samson", "symbol": "COPPERNOV", "netQuantity": -15.00, "clientBrokarage": 3451.43, "subBroker": "Sub Broker 2", "brokarage": 431.43, "brokerBrokarage": 0, "compBrokarage": 1231.76 },
-    { "login": 102, "name": "James", "symbol": "CRUDEOCT", "netQuantity": 43.00, "clientBrokarage": 12432.45, "subBroker": "Sub Broker 3", "brokarage": 123.34, "brokerBrokarage": 0, "compBrokarage": 3212.65 },
-    { "login": 102, "name": "James", "symbol": "LEADOCT", "netQuantity": 14.00, "clientBrokarage": 1231.34, "subBroker": "Sub Broker 3", "brokarage": 543.41, "brokerBrokarage": 0, "compBrokarage": 1553.63 },
-    { "login": 103, "name": "Connor", "symbol": "NICKELOCT", "netQuantity": 36.00, "clientBrokarage": 43553.54, "subBroker": "Sub Broker 1", "brokarage": 143.12, "brokerBrokarage": 0, "compBrokarage": 1256.53 },
-    { "login": 103, "name": "Connor", "symbol": "NATURALOCT", "netQuantity": -3.00, "clientBrokarage": 1234.23, "subBroker": "Sub Broker 4", "brokarage": 542.65, "brokerBrokarage": 0, "compBrokarage": 1251.76 },
+    { "login": 10, "name": "John", "symbol": "GOLDDEC", "netQuantity": 9.00, "clientBrokarage": 14345.98, "subBroker": "Sub Broker 1", "brokarage": 123.12, "brokerBrokarage": 0, "compBrokarage": 1233.12 },
+    { "login": 10, "name": "John", "symbol": "SILVERDEC", "netQuantity": 4.00, "clientBrokarage": 4312.12, "subBroker": "Sub Broker 1", "brokarage": 123.23, "brokerBrokarage": 0, "compBrokarage": 4312.21 },
+    { "login": 11, "name": "Samson", "symbol": "COPPERNOV", "netQuantity": -15.00, "clientBrokarage": 3451.43, "subBroker": "Sub Broker 2", "brokarage": 431.43, "brokerBrokarage": 0, "compBrokarage": 1231.76 },
+    { "login": 12, "name": "James", "symbol": "CRUDEOCT", "netQuantity": 43.00, "clientBrokarage": 12432.45, "subBroker": "Sub Broker 3", "brokarage": 123.34, "brokerBrokarage": 0, "compBrokarage": 3212.65 },
+    { "login": 12, "name": "James", "symbol": "LEADOCT", "netQuantity": 14.00, "clientBrokarage": 1231.34, "subBroker": "Sub Broker 3", "brokarage": 543.41, "brokerBrokarage": 0, "compBrokarage": 1553.63 },
+    { "login": 13, "name": "Connor", "symbol": "NICKELOCT", "netQuantity": 36.00, "clientBrokarage": 43553.54, "subBroker": "Sub Broker 1", "brokarage": 143.12, "brokerBrokarage": 0, "compBrokarage": 1256.53 },
+    { "login": 13, "name": "Connor", "symbol": "NATURALOCT", "netQuantity": -3.00, "clientBrokarage": 1234.23, "subBroker": "Sub Broker 4", "brokarage": 542.65, "brokerBrokarage": 0, "compBrokarage": 1251.76 },
   ]
 };
 

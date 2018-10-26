@@ -14,7 +14,7 @@ const symbolWisePositionPanelMetaData = {
       decimalLocator: 0,
       editable: false,
       hidden: true,
-      sequence: 1
+      sequence: 0
     },
     {
       name: "symbol",
@@ -27,8 +27,8 @@ const symbolWisePositionPanelMetaData = {
       sequence: 1
     },
     {
-      name: "volumeCompany",
-      displayValue: "Volume (Company)",
+      name: "clientQty",
+      displayValue: "Client Quantity",
       dataType: DOUBLE,
       decimalLocator: 2,
       editable: false,
@@ -36,8 +36,8 @@ const symbolWisePositionPanelMetaData = {
       sequence: 2
     },
     {
-      name: "avgPrice",
-      displayValue: "Average Price",
+      name: "clientAvg",
+      displayValue: "Client Average",
       dataType: DOUBLE,
       decimalLocator: 4,
       editable: false,
@@ -45,8 +45,8 @@ const symbolWisePositionPanelMetaData = {
       sequence: 3
     },
     {
-      name: "lastRate",
-      displayValue: "Last Rate",
+      name: "clientGrossExposure",
+      displayValue: "Client Gross Exposure",
       dataType: DOUBLE,
       decimalLocator: 4,
       editable: false,
@@ -54,8 +54,8 @@ const symbolWisePositionPanelMetaData = {
       sequence: 4
     },
     {
-      name: "profitLoss",
-      displayValue: "Profit & Loss",
+      name: "profit",
+      displayValue: "Profit",
       dataType: DOUBLE,
       decimalLocator: 0,
       editable: false,
@@ -63,8 +63,8 @@ const symbolWisePositionPanelMetaData = {
       sequence: 5
     },
     {
-      name: "compVolume",
-      displayValue: "Company Volume",
+      name: "companyQty",
+      displayValue: "Company Quantity",
       dataType: DOUBLE,
       decimalLocator: 2,
       editable: false,
@@ -72,8 +72,8 @@ const symbolWisePositionPanelMetaData = {
       sequence: 6
     },
     {
-      name: "compProfLoss",
-      displayValue: "Company P&L",
+      name: "companyAvg",
+      displayValue: "Company Average",
       dataType: DOUBLE,
       decimalLocator: 0,
       editable: false,
@@ -81,8 +81,8 @@ const symbolWisePositionPanelMetaData = {
       sequence: 7
     },
     {
-      name: "compExposure",
-      displayValue: "Company Exposure",
+      name: "companyBrokarage",
+      displayValue: "Company Brokarage",
       dataType: DOUBLE,
       decimalLocator: 0,
       editable: false,
@@ -90,17 +90,8 @@ const symbolWisePositionPanelMetaData = {
       sequence: 8
     },
     {
-      name: "grossExposure",
-      displayValue: "Gross Exposure",
-      dataType: DOUBLE,
-      decimalLocator: 0,
-      editable: false,
-      hidden: false,
-      sequence: 9
-    },
-    {
-      name: "grossVolume",
-      displayValue: "Gross Volume",
+      name: "companyPL",
+      displayValue: "Company P&L",
       dataType: DOUBLE,
       decimalLocator: 2,
       editable: false,
@@ -108,8 +99,8 @@ const symbolWisePositionPanelMetaData = {
       sequence: 10
     },
     {
-      name: "grossProfLoss",
-      displayValue: "Gross P&L",
+      name: "companyExposure",
+      displayValue: "Company Exposure",
       dataType: DOUBLE,
       decimalLocator: 0,
       editable: false,
@@ -124,7 +115,16 @@ const symbolWisePositionPanelMetaData = {
       editable: false,
       hidden: false,
       sequence: 12
-    }
+    },
+    {
+      name: "lastRate",
+      displayValue: "Last Rate",
+      dataType: DOUBLE,
+      decimalLocator: 4,
+      editable: false,
+      hidden: false,
+      sequence: 13
+    },
   ]
 };
 
