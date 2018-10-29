@@ -10,15 +10,17 @@ const clientMasterMetaData = {
     {
       key: "login",
       displayValue: "Login",
-      dataType: INT,
+      dataType: STRING,
+      size: 20,
       editable: false,
       hidden: false,
       sequence: 1
     },
     {
-      key: "symbol",
-      displayValue: "Symbol",
+      key: "symbolGroup",
+      displayValue: "Symbol Group",
       dataType: STRING,
+      size: 20,
       editable: false,
       hidden: false,
       sequence: 2
@@ -27,6 +29,7 @@ const clientMasterMetaData = {
       key: "name",
       displayValue: "Name",
       dataType: STRING,
+      size: 20,
       editable: false,
       hidden: false,
       sequence: 3
@@ -35,6 +38,7 @@ const clientMasterMetaData = {
       key: "broker",
       displayValue: "Broker",
       dataType: STRING,
+      size: 20,
       editable: false,
       hidden: false,
       sequence: 4
@@ -43,6 +47,7 @@ const clientMasterMetaData = {
       key: "subBroker",
       displayValue: "Sub Broker",
       dataType: STRING,
+      size: 20,
       editable: false,
       hidden: false,
       sequence: 5
@@ -51,6 +56,7 @@ const clientMasterMetaData = {
       key: "extraGroup",
       displayValue: "Extra Group",
       dataType: STRING,
+      size: 20,
       editable: false,
       hidden: false,
       sequence: 6
@@ -85,7 +91,8 @@ const clientMasterMetaData = {
     {
       key: "brokageType",
       displayValue: "Brokage Type",
-      dataType: INT,
+      dataType: STRING,
+      size: 8,
       editable: false,
       hidden: false,
       sequence: 10
@@ -94,7 +101,7 @@ const clientMasterMetaData = {
       key: "clientBrokage",
       displayValue: "Client Brokage",
       dataType: DOUBLE,
-      decimalLocator: 2,
+      decimalLocator: 5,
       editable: false,
       hidden: false,
       sequence: 11
@@ -103,7 +110,7 @@ const clientMasterMetaData = {
       key: "subBrokerBrokage",
       displayValue: "Sub Broker Brokage",
       dataType: DOUBLE,
-      decimalLocator: 2,
+      decimalLocator: 5,
       editable: false,
       hidden: false,
       sequence: 12
@@ -112,7 +119,7 @@ const clientMasterMetaData = {
       key: "bokerBrokage",
       displayValue: "Broker Brokage",
       dataType: DOUBLE,
-      decimalLocator: 2,
+      decimalLocator: 5,
       editable: false,
       hidden: false,
       sequence: 13
@@ -121,7 +128,7 @@ const clientMasterMetaData = {
       key: "companyBrokage",
       displayValue: "Company Brokage",
       dataType: DOUBLE,
-      decimalLocator: 2,
+      decimalLocator: 5,
       editable: false,
       hidden: false,
       sequence: 14
@@ -147,7 +154,7 @@ const clientMasterMetaData = {
     {
       key: "symbolWisePendingOrderEnableDisable",
       displayValue: "Symbol wise Pending Order Enable/Disable",
-      dataType: STRING,
+      dataType: INT,
       editable: false,
       hidden: false,
       sequence: 17
@@ -155,7 +162,7 @@ const clientMasterMetaData = {
     {
       key: "symbolPositionLimit",
       displayValue: "Symbol Position Limit (Gateway)",
-      dataType: STRING,
+      dataType: INT,
       editable: false,
       hidden: false,
       sequence: 18
@@ -163,26 +170,11 @@ const clientMasterMetaData = {
     {
       key: "symbolPendingOrderDiffFromBidAsk",
       displayValue: "Symbol Pending Order Difference From Bid/Ask (Gateway)",
-      dataType: STRING,
+      dataType: DOUBLE,
+      decimalLocator: 4,
       editable: false,
       hidden: false,
       sequence: 19
-    },
-    {
-      key: "groupMt5",
-      displayValue: "Group MT5",
-      dataType: STRING,
-      editable: false,
-      hidden: false,
-      sequence: 20
-    },
-    {
-      key: "groupExtra",
-      displayValue: "Group Extra",
-      dataType: STRING,
-      editable: false,
-      hidden: false,
-      sequence: 21
     },
     {
       key: "lossLimit",
@@ -191,7 +183,7 @@ const clientMasterMetaData = {
       decimalLocator: 2,
       editable: false,
       hidden: false,
-      sequence: 22
+      sequence: 20
     },
     {
       key: "creditLimit",
@@ -200,16 +192,7 @@ const clientMasterMetaData = {
       decimalLocator: 2,
       editable: false,
       hidden: false,
-      sequence: 23
-    },
-    {
-      key: "allotedLimit",
-      displayValue: "Alloted Limit",
-      dataType: DOUBLE,
-      decimalLocator: 2,
-      editable: false,
-      hidden: false,
-      sequence: 24
+      sequence: 21
     },
     {
       key: "comment",
@@ -217,24 +200,33 @@ const clientMasterMetaData = {
       dataType: STRING,
       editable: false,
       hidden: false,
-      sequence: 25
+      sequence: 22
     },
     {
       key: "qtyLimitMultiplayer",
       displayValue: "Quantity Limit Multiplayer",
       dataType: DOUBLE,
-      decimalLocator: 0,
+      decimalLocator: 2,
       editable: false,
       hidden: false,
-      sequence: 26
+      sequence: 23
     },
     {
       key: "ignoreTrader",
       displayValue: "Ignore Trader Y/N",
-      dataType: STRING,
+      dataType: INT,
       editable: false,
       hidden: false,
-      sequence: 27
+      sequence: 24
+    },
+    {
+      key: "colour",
+      displayValue: "Colour",
+      dataType: STRING,
+      size: 20,
+      editable: false,
+      hidden: false,
+      sequence: 25
     }
   ]
 }
