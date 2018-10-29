@@ -229,7 +229,182 @@ const clientMasterMetaData = {
       sequence: 25
     }
   ]
-}
+};
+
+const symbolMasterMetaData = {
+  type: constants.FETCH_SYMBOL_MASTER_META_DATA,
+  data: [
+    {
+      key: "symbol",
+      displayValue: "Symbol",
+      dataType: STRING,
+      size: 20,
+      editable: false,
+      hidden: false,
+      sequence: 1
+    },
+    {
+      key: "lastPrice",
+      displayValue: "Last Price",
+      dataType: DOUBLE,
+      decimalLocator: 4,
+      editable: false,
+      hidden: false,
+      sequence: 2
+    },
+    {
+      key: "multiplayer",
+      displayValue: "Multiplayer",
+      dataType: DOUBLE,
+      decimalLocator: 2,
+      editable: false,
+      hidden: false,
+      sequence: 3
+    },
+    {
+      key: "symbolMargin",
+      displayValue: "Symbol Margin",
+      dataType: DOUBLE,
+      decimalLocator: 2,
+      editable: false,
+      hidden: false,
+      sequence: 4
+    },
+    {
+      key: "symbolLimitPerPrice",
+      displayValue: "Symbol Limit Per Price (Gateway)",
+      dataType: DOUBLE,
+      decimalLocator: 2,
+      editable: false,
+      hidden: false,
+      sequence: 5
+    },
+    {
+      key: "symbolPendingOrderDiffFromBidOrAsk",
+      displayValue: "Symbol Pending Order Difference From Bid / Ask (Gateway)",
+      dataType: DOUBLE,
+      decimalLocator: 2,
+      editable: false,
+      hidden: false,
+      sequence: 6
+    },
+    {
+      key: "symbolLTPMapping",
+      displayValue: "Symbol LTP Mapping",
+      dataType: STRING,
+      size: 20,
+      editable: false,
+      hidden: false,
+      sequence: 7
+    },
+    {
+      key: "upperCircuit",
+      displayValue: "Upper Circuit",
+      dataType: DOUBLE,
+      decimalLocator: 2,
+      editable: false,
+      hidden: false,
+      sequence: 8
+    },
+    {
+      key: "lowerCircuit",
+      displayValue: "Lower Circuit",
+      dataType: DOUBLE,
+      decimalLocator: 2,
+      editable: false,
+      hidden: false,
+      sequence: 9
+    },
+    {
+      key: "exchangeSymbol",
+      displayValue: "Exchange Symbol",
+      dataType: STRING,
+      size: 20,
+      editable: false,
+      hidden: false,
+      sequence: 10
+    },
+    {
+      key: "nextSymbol",
+      displayValue: "Next Symbol",
+      dataType: STRING,
+      size: 20,
+      editable: false,
+      hidden: false,
+      sequence: 11
+    },
+    {
+      key: "nseLotSize",
+      displayValue: "NSE Lot Size",
+      dataType: INT,
+      editable: false,
+      hidden: false,
+      sequence: 12
+    },
+    {
+      key: "mtLotSize",
+      displayValue: "MT Lot Size",
+      dataType: INT,
+      editable: false,
+      hidden: false,
+      sequence: 13
+    },
+    {
+      key: "maxAllowedVolume",
+      displayValue: "Max Allowed Volumne",
+      dataType: DOUBLE,
+      decimalLocator: 2,
+      editable: false,
+      hidden: false,
+      sequence: 14
+    },
+    {
+      key: "allowedLimitPerClient",
+      displayValue: "Allowed Limit Per Client",
+      dataType: DOUBLE,
+      decimalLocator: 2,
+      editable: false,
+      hidden: false,
+      sequence: 15
+    },
+    {
+      key: "symbolMaxPositionAllowed",
+      displayValue: "Symbol Max Position Allowed",
+      dataType: DOUBLE,
+      decimalLocator: 2,
+      editable: false,
+      hidden: false,
+      sequence: 16
+    },
+    {
+      key: "symbolGroup",
+      displayValue: "Symbol Group",
+      dataType: STRING,
+      size: 20,
+      editable: false,
+      hidden: false,
+      sequence: 17
+    },
+    {
+      key: "binSize",
+      displayValue: "Bin Size",
+      dataType: DOUBLE,
+      decimalLocator: 2,
+      editable: false,
+      hidden: false,
+      sequence: 18
+    },
+    {
+      key: "pocketNumbers",
+      displayValue: "Pocket Numbers",
+      dataType: DOUBLE,
+      decimalLocator: 2,
+      editable: false,
+      hidden: false,
+      sequence: 19
+    }
+  ]
+};
 
 const symbolWisePositionPanelMetaData = {
   type: constants.SCRIPT_WISE_POSITION_META_DATA,
@@ -857,4 +1032,4 @@ const orderDataMetaData = {
   ]
 };
 
-module.exports = { clientMasterMetaData, symbolWisePositionPanelMetaData, netPositionPanelMetaData, orderDataMetaData };
+module.exports = { clientMasterMetaData, symbolMasterMetaData, symbolWisePositionPanelMetaData, netPositionPanelMetaData, orderDataMetaData };
