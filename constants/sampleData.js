@@ -16,7 +16,7 @@ const clientMasterData = {
   ]
 };
 
-const symbolMasterMetaData = {
+const symbolMasterData = {
   type: constants.SYMBOL_MASTER_DATA,
   data: [
     [
@@ -340,4 +340,4 @@ const orderData = {
   ]
 };
 
-module.exports = { clientMasterData, symbolMasterMetaData, symbolWisePositionData, tickData, netPositionData, orderData };
+module.exports = { clientMasterData, symbolMasterData, symbolWisePositionData, tickData, netPositionData, orderData };
