@@ -984,16 +984,21 @@ const orderDataMetaData = {
       "displayValue": "Login",
       "dataType": STRING,
       "editable": false,
-      "hidden": false,
-      "sequence": 1
+      "hidden": false
     },
     {
-      "key": "name",
-      "displayValue": "Name",
-      "dataType": STRING,
+      "key": "time",
+      "displayValue": "Time",
+      "dataType": INT,
       "editable": false,
-      "hidden": false,
-      "sequence": 2
+      "hidden": false
+    },
+    {
+      "key": "order",
+      "displayValue": "Order",
+      "dataType": INT,
+      "editable": false,
+      "hidden": false
     },
     {
       "key": "symbol",
@@ -1001,64 +1006,83 @@ const orderDataMetaData = {
       "dataType": STRING,
       "size": 30,
       "editable": false,
-      "hidden": false,
-      "sequence": 3
+      "hidden": false
     },
     {
-      "key": "netQuantity",
-      "displayValue": "Net Quantity",
+      "key": "type",
+      "displayValue": "Type",
+      "dataType": INT,
+      "editable": false,
+      "hidden": false
+    },
+    {
+      "key": "volume",
+      "displayValue": "Volume",
       "dataType": DOUBLE,
       "decimalLocator": 2,
       "editable": false,
-      "hidden": false,
-      "sequence": 4
+      "hidden": false
     },
     {
-      "key": "clientBrokarage",
-      "displayValue": "Client Brokarage",
+      "key": "price",
+      "displayValue": "Price",
       "dataType": DOUBLE,
-      "decimalLocator": 2,
+      "decimalLocator": 4,
       "editable": false,
-      "hidden": false,
-      "sequence": 5
+      "hidden": false
     },
     {
-      "key": "subBroker",
-      "displayValue": "Sub Broker",
+      "key": "comment",
+      "displayValue": "Comment",
       "dataType": STRING,
-      "size": 30,
       "editable": false,
-      "hidden": false,
-      "sequence": 6
+      "hidden": false
     },
     {
-      "key": "brokarage",
-      "displayValue": "Brokarage",
-      "dataType": DOUBLE,
-      "decimalLocator": 2,
+      "key": "status",
+      "displayValue": "Status",
+      "dataType": STRING,
       "editable": false,
-      "hidden": false,
-      "sequence": 7
+      "hidden": false
     },
     {
-      "key": "brokerBrokarage",
-      "displayValue": "Broker Brokarage",
-      "dataType": DOUBLE,
-      "decimalLocator": 2,
-      "editable": false,
-      "hidden": false,
-      "sequence": 8
+      "key": "select",
+      "displayValue": "Select",
+      "dataType": STRING,
+      "editable": true,
+      "hidden": false
     },
     {
-      "key": "compBrokarage",
-      "displayValue": "Company Brokarage",
-      "dataType": DOUBLE,
-      "decimalLocator": 2,
-      "editable": false,
-      "hidden": false,
-      "sequence": 9
+      "key": "statusSubtype",
+      "displayValue": "Status Subtype",
+      "dataType": STRING,
+      "editable": true,
+      "hidden": false
     },
+    {
+      "key": "relatedOrder",
+      "displayValue": "Related Order",
+      "dataType": STRING,
+      "editable": true,
+      "hidden": false
+    },
+    {
+      "key": "tradeHappenTime",
+      "displayValue": "Trade Happen Time",
+      "dataType": INT,
+      "editable": true,
+      "hidden": false
+    },
+    {
+      "key": "ourComment",
+      "displayValue": "Our Comment",
+      "dataType": STRING,
+      "editable": true,
+      "hidden": false
+    }
   ]
 };
+
+orderDataMetaData.data = orderDataMetaData.data.map((data, index) => ({ ...data, sequence: index }));
 
 module.exports = { clientMasterMetaData, symbolMasterMetaData, symbolWisePositionPanelMetaData, netPositionPanelMetaData, orderDataMetaData };
