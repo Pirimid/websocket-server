@@ -157,4 +157,23 @@ const orderDataMetaData = {
 };
 orderDataMetaData.data = orderDataMetaData.data.map((data, index) => ({ ...data, sequence: index }));
 
-module.exports = { clientMasterMetaData, symbolMasterMetaData, symbolWisePositionPanelMetaData, netPositionPanelMetaData, orderDataMetaData };
+const commentChangeMetaData = {
+  type: constants.COMMENT_CHANGE_META_DATA,
+  data: [
+    { "key": "login", "displayValue": "Login", "dataType": STRING, "editable": false, "hidden": false },
+    { "key": "time", "displayValue": "Time", "dataType": INT, "editable": false, "hidden": false },
+    { "key": "deal", "displayValue": "Deal", "dataType": INT, "editable": false, "hidden": false },
+    { "key": "order", "displayValue": "Order", "dataType": INT, "editable": false, "hidden": false },
+    { "key": "symbol", "displayValue": "Symbol", "dataType": STRING, "editable": false, "hidden": false },
+    { "key": "type", "displayValue": "Type", "dataType": STRING, "editable": false, "hidden": false },
+    { "key": "volume", "displayValue": "Volume", "dataType": DOUBLE, "decimalLocator": 2, "editable": false, "hidden": false },
+    { "key": "price", "displayValue": "Price", "dataType": DOUBLE, "decimalLocator": 2, "editable": false, "hidden": false },
+    { "key": "comment", "displayValue": "Comment", "dataType": STRING, "editable": false, "hidden": false },
+    { "key": "commentTo", "displayValue": "Comment To", "dataType": STRING, "editable": false, "hidden": false },
+    { "key": "select", "displayValue": "Select", "dataType": STRING, "editable": true, "hidden": false },
+    { "key": "oppositeDeal", "displayValue": "Opposite Deal", "dataType": STRING, "editable": true, "hidden": false }
+  ]
+};
+commentChangeMetaData.data = commentChangeMetaData.data.map((data, index) => ({ ...data, sequence: index }));
+
+module.exports = { clientMasterMetaData, symbolMasterMetaData, symbolWisePositionPanelMetaData, netPositionPanelMetaData, orderDataMetaData, commentChangeMetaData };

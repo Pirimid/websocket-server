@@ -14,7 +14,9 @@ const MessageHandlers = {
   [constants.FETCH_NET_POSITIONS]: (webSocket) => sendMessage(webSocket, sampleData.netPositionData),
   [constants.FETCH_TICK_DATA]: (webSocket) => startSendingTickData(webSocket),
   [constants.FETCH_ORDER_META_DATA]: (webSocket) => sendMessage(webSocket, metaData.orderDataMetaData),
-  [constants.FETCH_ORDER_DATA]: (webSocket) => sendOrderData(webSocket)
+  [constants.FETCH_ORDER_DATA]: (webSocket) => sendOrderData(webSocket),
+  [constants.FETCH_COMMENT_CHANGE_META_DATA]: (webSocket) => sendCommentChangeMetaData(webSocket),
+  [constants.FETCH_COMMENT_CHANGE_DATA]: (webSocket) => sendCommentChangeData(webSocket)
 };
 
 function registerEventListenersOnSocketIO(webSocket) {
@@ -58,6 +60,14 @@ function sendSymbolMasterMetaData(webSocket) {
 
 function sendSymbolMasterData(webSocket) {
   sendMessage(webSocket, sampleData.symbolMasterData);
+}
+
+function sendCommentChangeMetaData(webSocket) {
+  sendMessage(webSocket, metaData.commentChangeMetaData);
+}
+
+function sendCommentChangeData(webSocket) {
+  sendMessage(webSocket, sampleData.commentChangeData);
 }
 
 function startSendingTickData(webSocket) {
