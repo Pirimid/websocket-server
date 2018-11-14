@@ -18,7 +18,9 @@ const MessageHandlers = {
   [constants.FETCH_COMMENT_CHANGE_META_DATA]: (webSocket) => sendCommentChangeMetaData(webSocket),
   [constants.FETCH_COMMENT_CHANGE_DATA]: (webSocket) => sendCommentChangeData(webSocket),
   [constants.FETCH_ALERT_META_DATA]: (webSocket) => sendMessage(webSocket, metaData.alertMetaData),
-  [constants.FETCH_ALERT_DATA]: (webSocket) => sendMessage(webSocket, sampleData.alertData)
+  [constants.FETCH_ALERT_DATA]: (webSocket) => sendMessage(webSocket, sampleData.alertData),
+  [constants.FETCH_DEALING_META_DATA]: (webSocket) => sendMessage(webSocket, metaData.dealingMetaData),
+  [constants.FETCH_DEALING_DATA]: (webSocket) => sendMessage(webSocket, sampleData.dealingData)
 };
 
 function registerEventListenersOnSocketIO(webSocket) {

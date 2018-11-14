@@ -192,4 +192,24 @@ const alertMetaData = {
 };
 alertMetaData.data = alertMetaData.data.map((data, index) => ({ ...data, sequence: index }));
 
-module.exports = { clientMasterMetaData, symbolMasterMetaData, symbolWisePositionPanelMetaData, netPositionPanelMetaData, orderDataMetaData, commentChangeMetaData, alertMetaData };
+const dealingMetaData = {
+  type: constants.DEALING_META_DATA,
+  data: [
+    { "key": "logTime", "displayValue": "Log Time", "dataType": INT, "editable": false, "hidden": false },
+    { "key": "time", "displayValue": "Time", "dataType": INT, "editable": false, "hidden": false },
+    { "key": "login", "displayValue": "Login", "dataType": STRING, "editable": false, "hidden": false },
+    { "key": "deal", "displayValue": "Deal", "dataType": DOUBLE, "decimalLocator": 0, "editable": false, "hidden": false },
+    { "key": "order", "displayValue": "Order", "dataType": DOUBLE, "decimalLocator": 0, "editable": false, "hidden": false },
+    { "key": "orderType", "displayValue": "Order Type", "dataType": STRING, "editable": false, "hidden": false },
+    { "key": "symbol", "displayValue": "Symbol", "dataType": STRING, "editable": false, "hidden": false },
+    { "key": "type", "displayValue": "Type", "dataType": STRING, "editable": false, "hidden": false },
+    { "key": "volume", "displayValue": "Volume", "dataType": DOUBLE, "decimalLocator": 0, "editable": false, "hidden": false },
+    { "key": "price", "displayValue": "Price", "dataType": DOUBLE, "decimalLocator": 4, "editable": false, "hidden": false },
+    { "key": "comment", "displayValue": "Comment", "dataType": STRING, "editable": false, "hidden": false },
+    { "key": "entryType", "displayValue": "Entry Type", "dataType": STRING, "editable": false, "hidden": false },
+    { "key": "currentStatus", "displayValue": "Current Status", "dataType": STRING, "editable": false, "hidden": false }
+  ]
+};
+dealingMetaData.data = dealingMetaData.data.map((data, index) => ({ ...data, sequence: index }));
+
+module.exports = { clientMasterMetaData, symbolMasterMetaData, symbolWisePositionPanelMetaData, netPositionPanelMetaData, orderDataMetaData, commentChangeMetaData, alertMetaData, dealingMetaData };

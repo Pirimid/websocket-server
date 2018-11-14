@@ -264,4 +264,9 @@ const alertData = {
   ]
 };
 
-module.exports = { clientMasterData, symbolMasterData, symbolWisePositionData, tickData, netPositionData, orderData, commentChangeData, alertData };
+const dealingData = {
+  type: constants.DEALING_DATA,
+  data: []
+};
+
+module.exports = { clientMasterData, symbolMasterData, symbolWisePositionData, tickData, netPositionData, orderData, commentChangeData, alertData, dealingData };
