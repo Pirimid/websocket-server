@@ -176,4 +176,20 @@ const commentChangeMetaData = {
 };
 commentChangeMetaData.data = commentChangeMetaData.data.map((data, index) => ({ ...data, sequence: index }));
 
-module.exports = { clientMasterMetaData, symbolMasterMetaData, symbolWisePositionPanelMetaData, netPositionPanelMetaData, orderDataMetaData, commentChangeMetaData };
+const alertMetaData = {
+  type: constants.ALERT_META_DATA,
+  data: [
+    { "key": "alertId", "displayValue": "Alert Id", "dataType": INT, "editable": false, "hidden": true },
+    { "key": "eventType", "displayValue": "Event Type", "dataType": STRING, "editable": false, "hidden": false },
+    { "key": "time", "displayValue": "Time", "dataType": INT, "editable": false, "hidden": false },
+    { "key": "symbol", "displayValue": "Symbol", "dataType": STRING, "editable": false, "hidden": false },
+    { "key": "condition", "displayValue": "Condition", "dataType": STRING, "editable": false, "hidden": false },
+    { "key": "exchangeVolume", "displayValue": "Exchange Volume", "dataType": DOUBLE, "decimalLocator": 0, "editable": false, "hidden": false },
+    { "key": "clientVolume", "displayValue": "Client Volume", "dataType": DOUBLE, "decimalLocator": 0, "editable": false, "hidden": false },
+    { "key": "profLoss", "displayValue": "Profit & Loss", "dataType": DOUBLE, "decimalLocator": 0, "editable": false, "hidden": false },
+    { "key": "comment", "displayValue": "Comment", "dataType": STRING, "editable": false, "hidden": false }
+  ]
+};
+alertMetaData.data = alertMetaData.data.map((data, index) => ({ ...data, sequence: index }));
+
+module.exports = { clientMasterMetaData, symbolMasterMetaData, symbolWisePositionPanelMetaData, netPositionPanelMetaData, orderDataMetaData, commentChangeMetaData, alertMetaData };

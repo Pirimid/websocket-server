@@ -256,4 +256,12 @@ const commentChangeData = {
   data: []
 };
 
-module.exports = { clientMasterData, symbolMasterData, symbolWisePositionData, tickData, netPositionData, orderData, commentChangeData };
+const alertData = {
+  type: constants.ALERT_DATA,
+  data: [
+    { "alertId": 1, "eventType": "Manupulation", "time": "02:11:20 21.10.2018", "symbol": "GOLDDEC", "condition": "Buy Problem", "exchangeVolume": 90, "clientVolume": 150, "profLoss": 20104, "comment": "20001, 20008" },
+    { "alertId": 2, "eventType": "Big Profit", "time": "02:13:20 21.10.2018", "symbol": "GOLDDEC", "condition": "More then 1000000", "exchangeVolume": "", "clientVolume": 50, "profLoss": 10000000, "comment": "" }
+  ]
+};
+
+module.exports = { clientMasterData, symbolMasterData, symbolWisePositionData, tickData, netPositionData, orderData, commentChangeData, alertData };
