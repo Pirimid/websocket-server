@@ -5,7 +5,7 @@ const STRING = "string";
 const INT = "int";
 
 const clientMasterMetaData = {
-  type: constants.FETCH_CLIENT_MASTER_DATA,
+  type: constants.CLIENT_MASTER_META_DATA,
   data: [
     { "key": "login", "displayValue": "Login", "dataType": STRING, "size": 20, "editable": false, "hidden": false },
     { "key": "symbolGroup", "displayValue": "Symbol Group", "dataType": STRING, "size": 20, "editable": false, "hidden": false },
@@ -37,7 +37,7 @@ const clientMasterMetaData = {
 clientMasterMetaData.data = clientMasterMetaData.data.map((data, index) => ({ ...data, sequence: index }));
 
 const symbolMasterMetaData = {
-  type: constants.FETCH_SYMBOL_MASTER_META_DATA,
+  type: constants.SYMBOL_MASTER_META_DATA,
   data: [
     { "key": "symbol", "displayValue": "Symbol", "dataType": STRING, "size": 20, "editable": false, "hidden": false },
     { "key": "lastPrice", "displayValue": "Last Price", "dataType": DOUBLE, "decimalLocator": 4, "editable": false, "hidden": false },
