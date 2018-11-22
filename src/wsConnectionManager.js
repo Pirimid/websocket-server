@@ -1,7 +1,7 @@
 const socketIO = require("socket.io");
 const WS = require("ws");
 
-const constants = require("../constants/constants");
+const constants = require("./constants/constants");
 
 const wsMessageHandler = require("./wsMessageHandler");
 

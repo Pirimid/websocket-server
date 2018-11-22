@@ -6,7 +6,7 @@ const index = require("../src/index");
 
 const configureWebSocket = require("../src/wsConnectionManager");
 
-const constants = require("../constants/constants");
+const constants = require("../src/constants/constants");
 
 const app = express();
 app.use(index);

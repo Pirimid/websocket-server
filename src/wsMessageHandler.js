@@ -1,7 +1,7 @@
-const sampleData = require("../constants/sampleData");
-const metaData = require("../constants/metaData");
+const sampleData = require("./constants/sampleData");
+const metaData = require("./constants/metaData");
 
-const constants = require("../constants/constants");
+const constants = require("./constants/constants");
 
 const MessageHandlers = {
   [constants.FETCH_CLIENT_MASTER_META_DATA]: (webSocket) => sendClientMasterMetaData(webSocket),
