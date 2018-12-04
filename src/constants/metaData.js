@@ -6,7 +6,7 @@ const INT = "int";
 
 const clientMasterMetaData = {
   type: constants.CLIENT_MASTER_META_DATA,
-  uniqueKey: "login",
+  uniqueKey: ["login"],
   data: [
     { "key": "login", "displayValue": "Login", "dataType": STRING, "size": 20, "editable": false, "hidden": false },
     { "key": "symbolGroup", "displayValue": "Symbol Group", "dataType": STRING, "size": 20, "editable": false, "hidden": false },
@@ -39,7 +39,7 @@ clientMasterMetaData.data = clientMasterMetaData.data.map((data, index) => ({ ..
 
 const symbolMasterMetaData = {
   type: constants.SYMBOL_MASTER_META_DATA,
-  uniqueKey: "symbol",
+  uniqueKey: ["symbol"],
   data: [
     { "key": "symbol", "displayValue": "Symbol", "dataType": STRING, "size": 20, "editable": false, "hidden": false },
     { "key": "lastPrice", "displayValue": "Last Price", "dataType": DOUBLE, "decimalLocator": 4, "editable": false, "hidden": false },
@@ -66,7 +66,7 @@ symbolMasterMetaData.data = symbolMasterMetaData.data.map((data, index) => ({ ..
 
 const symbolWisePositionPanelMetaData = {
   type: constants.SCRIPT_WISE_POSITION_META_DATA,
-  uniqueKey: "symbol",
+  uniqueKey: ["symbol"],
   data: [
     { "key": "id", "displayValue": "Id", "dataType": INT, "decimalLocator": 0, "editable": false, "hidden": true },
     { "key": "symbol", "displayValue": "Symbol", "dataType": STRING, "size": 30, "decimalLocator": 0, "editable": false, "hidden": false },
@@ -142,7 +142,7 @@ netPositionPanelMetaData.data = netPositionPanelMetaData.data.map((data, index) 
 
 const orderDataMetaData = {
   type: constants.ORDER_META_DATA,
-  uniqueKey: "order",
+  uniqueKey: ["order"],
   data: [
     { "key": "login", "displayValue": "Login", "dataType": STRING, "editable": false, "hidden": false },
     { "key": "time", "displayValue": "Time", "dataType": INT, "editable": false, "hidden": false },
@@ -164,7 +164,7 @@ orderDataMetaData.data = orderDataMetaData.data.map((data, index) => ({ ...data,
 
 const commentChangeMetaData = {
   type: constants.COMMENT_CHANGE_META_DATA,
-  uniqueKey: "login",
+  uniqueKey: ["login"],
   data: [
     { "key": "login", "displayValue": "Login", "dataType": STRING, "editable": false, "hidden": false },
     { "key": "time", "displayValue": "Time", "dataType": INT, "editable": false, "hidden": false },
@@ -184,7 +184,7 @@ commentChangeMetaData.data = commentChangeMetaData.data.map((data, index) => ({ 
 
 const alertMetaData = {
   type: constants.ALERT_META_DATA,
-  uniqueKey: "alertId",
+  uniqueKey: ["alertId"],
   data: [
     { "key": "alertId", "displayValue": "Alert Id", "dataType": INT, "editable": false, "hidden": true },
     { "key": "eventType", "displayValue": "Event Type", "dataType": STRING, "editable": false, "hidden": false },
@@ -201,7 +201,7 @@ alertMetaData.data = alertMetaData.data.map((data, index) => ({ ...data, sequenc
 
 const dealingMetaData = {
   type: constants.DEALING_META_DATA,
-  uniqueKey: "login",
+  uniqueKey: ["login"],
   data: [
     { "key": "logTime", "displayValue": "Log Time", "dataType": INT, "editable": false, "hidden": false },
     { "key": "time", "displayValue": "Time", "dataType": INT, "editable": false, "hidden": false },

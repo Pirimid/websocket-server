@@ -10,6 +10,12 @@ const MESSAGE = "message";
 
 /* Oreka Message Types */
 
+// Login
+const LOGIN_REQUEST = "login";
+const LOGIN_CREDENTIALS = { "login": "1001", "pwd": "hello12345" };
+const LOGIN_FAILED = { "type": "loginstatus", "status": "failed" };
+const LOGIN_SUCCESS = { "type": "loginstatus", "status": "success" };
+
 // Client Master
 const FETCH_CLIENT_MASTER_META_DATA = "FETCH_CLIENT_MASTER_META_DATA";
 const CLIENT_MASTER_META_DATA = "CLIENT_MASTER_META_DATA";
@@ -65,6 +71,7 @@ const TICK_DATA = "TICK_DATA";
 
 module.exports = {
   SOCKET_IO, STANDARD_WEB_SOCKET, CONNECTION, DISCONNECT, CLOSE, MESSAGE,
+  LOGIN_REQUEST, LOGIN_CREDENTIALS, LOGIN_SUCCESS, LOGIN_FAILED,
   FETCH_SYMBOL_MASTER_META_DATA, SYMBOL_MASTER_META_DATA,
   FETCH_SYMBOL_MASTER_DATA, SYMBOL_MASTER_DATA,
   FETCH_CLIENT_MASTER_META_DATA, CLIENT_MASTER_META_DATA,

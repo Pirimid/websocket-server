@@ -4,6 +4,7 @@ const metaData = require("./constants/metaData");
 const constants = require("./constants/constants");
 
 const MessageHandlers = {
+  [constants.LOGIN_REQUEST]: (webSocket, message) => handleLogin(webSocket, message),
   [constants.FETCH_CLIENT_MASTER_META_DATA]: (webSocket) => sendClientMasterMetaData(webSocket),
   [constants.FETCH_CLIENT_MASTER_DATA]: (webSocket) => sendClientMasterData(webSocket),
   [constants.FETCH_SYMBOL_MASTER_META_DATA]: (webSocket) => sendSymbolMasterMetaData(webSocket),
@@ -48,6 +49,15 @@ function handleMessage(webSocket, message) {
 function sendMessage(webSocket, message) {
   const msg = JSON.stringify(message);
   webSocket.send(msg);
+}
+
+function handleLogin(webSocket, message) {
+  if(message.login === constants.LOGIN_CREDENTIALS.login && message.pwd === constants.LOGIN_CREDENTIALS.pwd)
+  {
+    sendMessage(webSocket, constants.LOGIN_SUCCESS);
+  } else {
+    sendMessage(webSocket, constants.LOGIN_FAILED);
+  }
 }
 
 function sendClientMasterMetaData(webSocket) {
