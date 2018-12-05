@@ -65,7 +65,7 @@ const symbolMasterMetaData = {
 symbolMasterMetaData.data = symbolMasterMetaData.data.map((data, index) => ({ ...data, sequence: index }));
 
 const symbolWisePositionPanelMetaData = {
-  type: constants.SCRIPT_WISE_POSITION_META_DATA,
+  type: constants.SYMBOL_WISE_POSITION_META_DATA,
   uniqueKey: ["symbol"],
   data: [
     { "key": "id", "displayValue": "Id", "dataType": INT, "decimalLocator": 0, "editable": false, "hidden": true },
@@ -86,7 +86,7 @@ const symbolWisePositionPanelMetaData = {
 symbolWisePositionPanelMetaData.data = symbolWisePositionPanelMetaData.data.map((data, index) => ({ ...data, sequence: index }));
 
 const netPositionPanelMetaData = {
-  type: constants.NET_POSITION_META_DATA,
+  type: constants.CLIENT_WISE_NET_POSITION_META_DATA,
   uniqueKey: ["login", "symbol"],
   data: [
     { "key": "login", "displayValue": "Login", "dataType": STRING, "size": 15, "decimalLocator": null, "editable": false, "hidden": false },

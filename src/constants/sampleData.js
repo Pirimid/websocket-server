@@ -31,7 +31,7 @@ const symbolMasterData = {
 };
 
 const symbolWisePositionData = {
-  type: constants.SCRIPT_WISE_POSITIONS_DATA,
+  type: constants.SYMBOL_WISE_POSITIONS_DATA,
   data: [
     { "symbol": "GOLDDEC", "clientQty": 4, "clientAvg": 30972.5, "clientGrossExposure": 12389000, "profit": 11000, "companyQty": -6.97, "companyAvg": -30977.9, "lastRate": 31000, "companyBrokarage": 21281, "companyPL": 5153, "companyExposure": 21591597, "multiplayer": 100 },
     { "symbol": "SILVERDEC", "clientQty": -17, "clientAvg": 37819.18, "clientGrossExposure": -19287780, "profit": -602220, "companyQty": 11.91, "companyAvg": -37538.4, "lastRate": 39000, "companyBrokarage": 23247, "companyPL": 544841, "companyExposure": -13414722, "multiplayer": 30 },
@@ -60,7 +60,7 @@ const tickData = {
 
 const netPositionData =
 {
-  type: constants.NET_POSITIONS,
+  type: constants.CLIENT_WISE_NET_POSITIONS,
   data: [
     { "login": 20001, "name": "A", "symbol": "GOLDDEC", "volume": 9, "prevVol": 0, "volDiff": 9, "avg": 30911, "balance": 100, "lastRate": 31000, "clientBrokTotal": 14345, "lastUpdated": "21.10.2018", "subBrokerBrokTotal": 8607, "brokerBrokTotal": 2869, "compBal": 2869, "extraVolume": 0, "subBrokerVolume": 0, "brokerVolume": 0, "companyVolume": -9, "clientLots": 9, "subBrokerLots": 0, "brokerLots": 0, "companyLots": -9, "clientP&L": 65855, "subBrokerP&L": 8607, "brokerP&L": 2869, "companyP&L": -77331, "clientTotal": -83585, "subBrokerTotal": 40506, "brokerTotal": 13502, "companyTotal": 29577, "grossExposure": 27819900, "subBrokerExposure": 0, "brokerExposure": 0, "companyExposure": 27819900, "multiplayer": 100, "brokerName": "AH", "subBrokerName": "ABHI", "extraGroup": "abc", "subbrokerRatio": 0, "brokerRatio": 0, "companyRation": 100, "clientBrokerageType": "1(PerLot)", "clientBrokerage": "250", "subBrokerBrokerage": "150", "brokerBrokerage": "50", "companyBrokerage": "50", "maxAllowedVolume": 100 },
     { "login": 20001, "name": "A", "symbol": "SILVERDEC", "volume": 7, "prevVol": 0, "volDiff": 7, "avg": 39807, "balance": 100, "lastRate": 39000, "clientBrokTotal": 5440, "lastUpdated": "21.10.2018", "subBrokerBrokTotal": 3264, "brokerBrokTotal": 1088, "compBal": 1088, "extraVolume": 0, "subBrokerVolume": 0, "brokerVolume": 0, "companyVolume": -7, "clientLots": 7, "subBrokerLots": 0, "brokerLots": 0, "companyLots": -7, "clientP&L": -174810, "subBrokerP&L": 3264, "brokerP&L": 1088, "companyP&L": 170458, "clientTotal": -83585, "subBrokerTotal": 40506, "brokerTotal": 13502, "companyTotal": 29577, "grossExposure": 8359470, "subBrokerExposure": 0, "brokerExposure": 0, "companyExposure": 8359470, "multiplayer": 30, "brokerName": "AH", "subBrokerName": "ABHI", "extraGroup": "abc", "subbrokerRatio": 0, "brokerRatio": 0, "companyRation": 100, "clientBrokerageType": "1(PerLot)", "clientBrokerage": "250", "subBrokerBrokerage": "150", "brokerBrokerage": "50", "companyBrokerage": "50", "maxAllowedVolume": 100 },

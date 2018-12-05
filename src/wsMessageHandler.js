@@ -9,10 +9,10 @@ const MessageHandlers = {
   [constants.FETCH_CLIENT_MASTER_DATA]: (webSocket) => sendClientMasterData(webSocket),
   [constants.FETCH_SYMBOL_MASTER_META_DATA]: (webSocket) => sendSymbolMasterMetaData(webSocket),
   [constants.FETCH_SYMBOL_MASTER_DATA]: (webSocket) => sendSymbolMasterData(webSocket),
-  [constants.FETCH_SCRIPT_WISE_POSITOINS_META_DATA]: (webSocket) => sendMessage(webSocket, metaData.symbolWisePositionPanelMetaData),
-  [constants.FETCH_SCRIPT_WISE_POSITIONS]: (webSocket) => sendTickData(webSocket),
-  [constants.FETCH_NET_POSITION_META_DATA]: (webSocket) => sendMessage(webSocket, metaData.netPositionPanelMetaData),
-  [constants.FETCH_NET_POSITIONS]: (webSocket) => sendMessage(webSocket, sampleData.netPositionData),
+  [constants.FETCH_SYMBOL_WISE_POSITOINS_META_DATA]: (webSocket) => sendMessage(webSocket, metaData.symbolWisePositionPanelMetaData),
+  [constants.FETCH_SYMBOL_WISE_POSITIONS]: (webSocket) => sendTickData(webSocket),
+  [constants.FETCH_CLIENT_WISE_NET_POSITION_META_DATA]: (webSocket) => sendMessage(webSocket, metaData.netPositionPanelMetaData),
+  [constants.FETCH_CLIENT_WISE_NET_POSITIONS]: (webSocket) => sendMessage(webSocket, sampleData.netPositionData),
   [constants.FETCH_TICK_DATA]: (webSocket) => startSendingTickData(webSocket),
   [constants.FETCH_ORDER_META_DATA]: (webSocket) => sendMessage(webSocket, metaData.orderDataMetaData),
   [constants.FETCH_ORDER_DATA]: (webSocket) => sendOrderData(webSocket),
@@ -139,7 +139,7 @@ const sendUpdates = (webSocket) => sendMessage(webSocket, generateNewUpdatedData
 
 const generateNewUpdatedData = () => {
   const data = sampleData.symbolWisePositionData.data.map(symbol => ({ id: symbol.id, clientAvg: getNewValue(symbol.clientAvg) }));
-  const updatedData = { type: constants.SCRIPT_WISE_POSITIONS_DATA_UPDATED, data };
+  const updatedData = { type: constants.SYMBOL_WISE_POSITIONS_DATA_UPDATED, data };
   return updatedData;
 }
 
